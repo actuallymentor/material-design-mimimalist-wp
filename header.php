@@ -8,19 +8,6 @@
 </head>
 <body <?php body_class(); ?>>
 	<header id="header" role="banner">
-
-		<div class="navbar">
-			<!-- Top bar -->
-			<nav id="topbar" role='navigation'>
-				<div class="nav-wrapper z-depth-1">
-					<a class="brand-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_html( get_bloginfo( 'name' ) ); ?>" rel="home"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></a>
-				</div>
-				<!-- <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?> -->
-			</div>
-		</nav>
-	</div>
-
-
 	<!-- Header block -->
 
 	<?php if ( is_front_page() || is_home() || is_front_page() && is_home() ): ?>
