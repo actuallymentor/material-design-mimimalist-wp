@@ -62,20 +62,27 @@
 
 		<?php else : ?> 
 			<?php if  ( $article == 9 ): ?> 
-				<div class="col l12 m12 s12 card collection">
-				<? endif; ?>
-				<a class="collection-item" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark"> 
-					Read: <?php the_title();  ?>
-				</a>
-			<?php endif ; ?>
+				<div id="archive" class="col l12 s12 m12">
+					<h5 class="grey-text">Article archive</h2>
+						<div class="col l12 m12 s12 card collection">
+						<? endif; ?>
+						<a class="col l12 m12 s12 collection-item left" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark">
+							<div class="col valign-wrapper l12 m12 s12">
+								<?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'thumbnail', 'class=circle responsive-img left' ); } ?>
 
-			<?php $article++ ; // Increment post number ?>
-		<?php endwhile; endif; ?>
-	</div>
+								<?php the_title();  ?>
+							</div>
+						</a>
+					<?php endif ; ?>
 
-</section>
+					<?php $article++ ; // Increment post number ?>
+				<?php endwhile; endif; ?>
+			</div>
+		</div>
+
+	</section>
 
 
 
-<!-- Wordpress Footer -->
-<?php get_footer(); ?>
+	<!-- Wordpress Footer -->
+	<?php get_footer(); ?>

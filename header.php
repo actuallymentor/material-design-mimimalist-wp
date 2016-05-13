@@ -15,7 +15,9 @@
 		<div id="header-intro" class="">
 			<div class="col l12 s12 valign-wrapper">
 				<div class="container center">
-					<h1 id="title" class="valign white-text center-align col l12 m12 s12"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></h1>
+					<a href="<?php get_site_url (  )  ?>">
+						<h1 id="title" class="valign white-text center-align col l12 m12 s12"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></h1>
+					</a>
 
 					<?php if ( is_front_page() || is_home() || is_front_page() && is_home() ): ?>
 						<h2 id="subtitle" class="valign white-text center-align col l12 m12 s12"><?php bloginfo( 'description' ); ?></h2>

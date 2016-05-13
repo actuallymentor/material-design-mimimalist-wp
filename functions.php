@@ -57,6 +57,7 @@ function materialize_comments_number( $count ) {
 
 // Add thumbnail support
 add_theme_support( 'post-thumbnails' );
+add_image_size ( 'thumbnail','50', '50', true );
 add_image_size ( 'small','250', '250', true );
 add_image_size ( 'medium','550', '400', true );
 add_image_size ( 'large','1100', '700', true );
@@ -69,6 +70,7 @@ function materialize_load_scripts ( ) {
 	wp_enqueue_script( 'materialize', 'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js', ['jquery'], '0.97.6', true );
 	wp_enqueue_style ( 'materialize', 'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css', [], '0.97.6', 'all' );
 	wp_enqueue_style( 'custom-styles', get_stylesheet_uri() );
+	wp_enqueue_script( 'custom-js', get_template_directory_uri() . '/js/custom.js', ['jquery'], '1.0.0', true );
 }
 
 
