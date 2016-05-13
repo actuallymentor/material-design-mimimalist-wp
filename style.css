@@ -22,6 +22,9 @@ img {
   #header-intro #subtitle {
     font-style: italic; }
 
+#container #content {
+  padding-top: 50px; }
+
 .card-image.black img {
   opacity: 0.8; }
 
