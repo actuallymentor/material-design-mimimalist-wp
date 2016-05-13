@@ -57,7 +57,26 @@ img {
 
 .card-image.black {
 	img {
-		opacity: 0.8;
+		// opacity: 0.8;
+	}
+	.entry-title {
+		width: 100%;
+		background-color: $primary-color;
+	}
+}
+article {
+	&.featured {
+
+	}
+	&.medium {
+		.entry-title {
+			font-size: 1.2em;
+		}
+	}
+	&.small {
+		.entry-title {
+			font-size: 1em;
+		}
 	}
 }
 

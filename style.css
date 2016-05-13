@@ -25,8 +25,14 @@ img {
 #container #content {
   padding-top: 50px; }
 
-.card-image.black img {
-  opacity: 0.8; }
+.card-image.black .entry-title {
+  width: 100%;
+  background-color: #607D8B; }
+
+article.medium .entry-title {
+  font-size: 1.2em; }
+article.small .entry-title {
+  font-size: 1em; }
 
 footer.page-footer {
   background-color: #607D8B; }
