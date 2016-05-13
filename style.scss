@@ -22,18 +22,26 @@ img {
 // Header
 
 .navbar {
-	nav#topbar {
+	nav#main-nav {
 		background-color: $primary-color;
 		.nav-wrapper {
-			padding: 0 10px;
+			ul {
+				display: inline-block;
+			}
+			.menu {
+				text-align: center;
+			}
 		}
 	}
 }
 #header-intro {
-	height: 400px;
+	height: 100vh;
 	background-color: $primary-color-light;
 	.valign-wrapper {
 		height: 100%;
+	}
+	#subtitle {
+		font-style: italic;
 	}
 }
 

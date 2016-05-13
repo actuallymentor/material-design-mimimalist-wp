@@ -7,16 +7,20 @@ img {
 .nopad {
   padding: 0 !important; }
 
-.navbar nav#topbar {
+.navbar nav#main-nav {
   background-color: #607D8B; }
-  .navbar nav#topbar .nav-wrapper {
-    padding: 0 10px; }
+  .navbar nav#main-nav .nav-wrapper ul {
+    display: inline-block; }
+  .navbar nav#main-nav .nav-wrapper .menu {
+    text-align: center; }
 
 #header-intro {
-  height: 400px;
+  height: 100vh;
   background-color: #CFD8DC; }
   #header-intro .valign-wrapper {
     height: 100%; }
+  #header-intro #subtitle {
+    font-style: italic; }
 
 .card-image.black img {
   opacity: 0.8; }
