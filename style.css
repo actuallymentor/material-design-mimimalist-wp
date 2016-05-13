@@ -11,7 +11,7 @@ img {
   background-color: #607D8B; }
   .navbar nav#main-nav .nav-wrapper ul {
     display: inline-block; }
-  .navbar nav#main-nav .nav-wrapper .menu {
+  .navbar nav#main-nav .nav-wrapper div {
     text-align: center; }
 
 #header-intro {

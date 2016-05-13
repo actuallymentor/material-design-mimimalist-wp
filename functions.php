@@ -55,6 +55,12 @@ function materialize_comments_number( $count ) {
 	}
 }
 
+// Add thumbnail support
+add_theme_support( 'post-thumbnails' );
+add_image_size ( 'small','250', '250', true );
+add_image_size ( 'medium','550', '400', true );
+add_image_size ( 'large','1100', '700', true );
+
 
 // Scripts, handle, src, deps, ver, in_footer
 add_action( 'wp_enqueue_scripts', 'materialize_load_scripts' );

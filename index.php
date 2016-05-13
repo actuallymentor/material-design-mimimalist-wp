@@ -9,42 +9,85 @@
 		<?php
 		$postclasses = 'col ';
 		if  ( $article == 0 ) {
-			$postclasses .= 'l12 m12 s12';
+			$postclasses .= '';
 		} elseif  ( $article < 5 ) {
-			$postclasses .= 'l6 m6 s12';
+			$postclasses .= '';
 		} elseif  ( $article < 9 ) {
-			$postclasses .= 'l3 m6 s12';
+			$postclasses .= '';
 		} else {
 			$postclasses .= 'l12';
 		}
 		?>
 
-
-		<!-- Article loop -->
-		<article class="col <?php echo $postclasses; ?> <?php post_class(); ?>" id="post-<?php the_ID(); ?>">
-			<header class="card">
-
-				<?php if ( $article < 9 ) : ?> 
+		<!-- Filter style based on post number -->
+		<!-- First article -->
+		<?php if ( $article == 0 ) : ?> 
+			<article class="col l12 m12 s12 <?php post_class(); ?>" id="post-<?php the_ID(); ?>">
+				<header class="card">
 					<div class="card-image black">
 						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark">
-							<?php if ( has_post_thumbnail() ) { the_post_thumbnail(); } ?>
+							<?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'large' ); } ?>
 						</a>
 						<a class="entry-title card-title white-text" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark"><?php the_title(); ?></a>
 					</div>
-				<?php endif; ?>
-				<div class="card-action">
-					<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark"> 
-					<?php if ( $article < 9 ) { echo 'Read this'; } else { the_title(); } ?>...
-					</a>
-				</div>
-			</header>
+					<div class="card-action">
+						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark"> 
+							Read this...
+						</a>
+					</div>
+				</header>
+			</article>
 
-			<!-- <?php get_template_part( 'entry', 'meta' ); ?> -->
-		</article>
-		<!-- END Article loop -->
 
-		<?php $article++ ; // Increment post number ?>
-	<?php endwhile; endif; ?>
+		<?php elseif ( $article < 5 ) : ?> 
+			<article class="col l6 m6 s12 <?php post_class(); ?>" id="post-<?php the_ID(); ?>">
+				<header class="card">
+
+					<div class="card-image black">
+						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark">
+							<?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'medium' ); } ?>
+						</a>
+						<a class="entry-title card-title white-text" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark"><?php the_title(); ?></a>
+					</div>
+					<div class="card-action">
+						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark"> 
+							Read this...
+						</a>
+					</div>
+				</header>
+			</article>
+
+
+		<?php elseif ( $article < 9 ) : ?> 
+			<article class="col l3 m6 s12 <?php post_class(); ?>" id="post-<?php the_ID(); ?>">
+				<header class="card">
+					<div class="card-image black">
+						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark">
+							<?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'small' ); } ?>
+						</a>
+						<a class="entry-title card-title white-text" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark"><?php the_title(); ?></a>
+					</div>
+					<div class="card-action">
+						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark"> 
+							Read this...
+						</a>
+					</div>
+				</header>
+			</article>
+
+		<?php else : ?> 
+			<?php if  ( $article == 9 ): ?> 
+				<div class="col l12 m12 s12 collection">
+				<? endif; ?>
+				<a class="collection-item" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark"> 
+					Read: <?php the_title();  ?>
+				</a>
+			<?php endif ; ?>
+
+			<?php $article++ ; // Increment post number ?>
+		<?php endwhile; endif; ?>
+	</div>
+	
 </section>
 
 
