@@ -1,20 +1,55 @@
-// Header
+// Colors
+$primary-color-dark:   #455A64;
+$primary-color:        #607D8B;
+$primary-color-light:  #CFD8DC;
+$primary-color-text:   #FFFFFF;
+$accent-color:         #9E9E9E;
+$primary-text-color:   #212121;
+$secondary-text-color: #727272;
+$divider-color:        #B6B6B6;
 
-nav {
-	.nav-wrapper {
-		padding: 0 10px;
-	}
+// Globals
+img {
+	height: auto;
+	width: auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+.nopad {
+	padding: 0 !important;
 }
 
-#header-intro {
-	height: 500px;
+// Header
 
+.navbar {
+	nav#topbar {
+		background-color: $primary-color;
+		.nav-wrapper {
+			padding: 0 10px;
+		}
+	}
+}
+#header-intro {
+	height: 400px;
+	background-color: $primary-color-light;
 	.valign-wrapper {
 		height: 100%;
 	}
 }
 
+// Index
+
+.card-image.black {
+	img {
+		opacity: 0.8;
+	}
+}
+
 // Footer
+
+footer.page-footer {
+	background-color: $primary-color;
+}
 
 // Make it sticky
 body {

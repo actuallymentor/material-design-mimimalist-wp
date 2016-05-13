@@ -1,10 +1,28 @@
-nav .nav-wrapper {
-  padding: 0 10px; }
+img {
+  height: auto;
+  width: auto;
+  max-width: 100%;
+  max-height: 100%; }
+
+.nopad {
+  padding: 0 !important; }
+
+.navbar nav#topbar {
+  background-color: #607D8B; }
+  .navbar nav#topbar .nav-wrapper {
+    padding: 0 10px; }
 
 #header-intro {
-  height: 500px; }
+  height: 400px;
+  background-color: #CFD8DC; }
   #header-intro .valign-wrapper {
     height: 100%; }
+
+.card-image.black img {
+  opacity: 0.8; }
+
+footer.page-footer {
+  background-color: #607D8B; }
 
 body {
   display: flex;
