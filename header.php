@@ -23,7 +23,9 @@
 						<h2 id="subtitle" class="valign white-text center-align col l12 m12 s12"><?php bloginfo( 'description' ); ?></h2>
 
 					<?php elseif ( is_single (  )  ): ?>
-						<h2 id="subtitle" class="valign white-text center-align col l12 m12 s12"><?php the_title(); ?></h2>
+						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+							<h2 id="subtitle" class="valign white-text center-align col l12 m12 s12"><?php the_title(); ?></h2>
+						</a>
 					<?php endif; ?>
 
 				</div>
