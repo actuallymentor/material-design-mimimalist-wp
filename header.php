@@ -54,17 +54,25 @@
 							</a>
 						</header>
 
-						
-					</div>
-				<?php endif; ?>
+						<!-- Archives page stuff -->
+					<?php elseif ( is_404 (  )   ): ?>
+						<a id="title" class="valign white-text center-align col l12 m12 s12" href="<?php echo get_option('siteurl') ?>">
+							<h1><?php echo esc_html( get_bloginfo( 'name' ) ); ?></h1>
+						</a>
+						<header>
+								<h2 id="subtitle" class="valign white-text center-align col l12 m12 s12">Oh no! Page not found!</h2>
+						</header>
 
+
+					<?php endif; ?>
+
+				</div>
 			</div>
 		</div>
-	</div>
 
 
 
 
-</header>
-<main id="container">
-	<section class="row container" id="content" role="main">
+	</header>
+	<main id="container">
+		<section class="row container" id="content" role="main">
