@@ -1,88 +1,91 @@
 <!-- WordPress Header -->
 <?php get_header(); ?>
 
+<div class="row">
+	<div class="col nopad l12 m12 s12">
+		<?php $article = 0; // Track post number ?>
 
-<section class="col l8 offset-l2 m10 offset-m1 s12" id="content" role="main">
-	<?php $article = 0; // Track post number ?>
-	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-		<?php
-		$postclasses = 'col ';
-		if  ( $article == 0 ) {
-			$postclasses .= '';
-		} elseif  ( $article < 5 ) {
-			$postclasses .= '';
-		} elseif  ( $article < 9 ) {
-			$postclasses .= '';
-		} else {
-			$postclasses .= 'l12';
-		}
-		?>
+			<?php if ( $article == 0 ) : ?> 
+				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark">
+					<article <?php post_class('featured center col l12 m12 s12'); ?> id="post-<?php the_ID(); ?>">
+						<header>
 
-		<!-- Filter style based on post number -->
-		<!-- First article -->
-		<?php if ( $article == 0 ) : ?> 
-			<article class="featured col l12 m12 s12 <?php post_class(); ?>" id="post-<?php the_ID(); ?>">
-				<header class="card">
-					<div class="card-image black">
-						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark">
-							<?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'large' ); } ?>
+							<?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'thumbnail', array( 'class' => 'circle' ) ); } ?>
+							<h2 href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark"><?php the_title(); ?></h2>
+
+							<i><?php get_template_part( 'entry', 'meta' ); ?></i>
+
+						</header>
+					</article>
+				</a>
+
+				<!-- New design attempt -->
+			<?php elseif ( $article < 7 ) : ?> 
+
+				
+				<article  <?php post_class('smalllist center col l4 m6 s12'); ?> id="post-<?php the_ID(); ?>">
+					<header class="">
+						<a class="col l12 m12 s12" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark">
+							<?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'thumbnail', array( 'class' => 'circle' ) ); } ?>
+							<h2 href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark"><?php the_title(); ?></h2>
 						</a>
-						<span class="entry-title card-title white-text" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark"><?php the_title(); ?></span>
-					</div>
-				</header>
-			</article>
+						<i class="col l12 m12 s12"><?php get_template_part( 'entry', 'meta' ); ?></i>
+
+					</header>
+					
+				</article>
+				
 
 
-		<?php elseif ( $article < 5 ) : ?> 
-			<article class="medium col l6 m6 s12 <?php post_class(); ?>" id="post-<?php the_ID(); ?>">
-				<header class="card">
+			<?php elseif ( $article == 7 ) : ?> 
+				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark">
+					<article <?php post_class('featured center col l12 m12 s12'); ?> id="post-<?php the_ID(); ?>">
+						<header>
 
-					<div class="card-image black">
-						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark">
-							<?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'medium' ); } ?>
-						</a>
-						<a class="truncate entry-title card-title white-text" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark"><?php the_title(); ?></a>
-					</div>
-				</header>
-			</article>
+							<?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'thumbnail', array( 'class' => 'circle' ) ); } ?>
+							<h2 href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark"><?php the_title(); ?></h2>
 
+							<i><?php get_template_part( 'entry', 'meta' ); ?></i>
 
-		<?php elseif ( $article < 9 ) : ?> 
-			<article class="small col l3 m6 s12 <?php post_class(); ?>" id="post-<?php the_ID(); ?>">
-				<header class="card">
-					<div class="card-image black">
-						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark">
-							<?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'small' ); } ?>
-						</a>
-						<a class="truncate entry-title card-title white-text" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark"><?php the_title(); ?></a>
-					</div>
-				</header>
-			</article>
+						</header>
+					</article>
+				</a>
 
-		<?php else : ?> 
-			<?php if  ( $article == 9 ): ?> 
-				<div id="archive" class="col l12 s12 m12">
-					<h5 class="grey-text">Article archive</h2>
-						<div class="col l12 m12 s12 card collection">
-						<? endif; ?>
-						<a class="col l12 m12 s12 collection-item left" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark">
-							<div class="col valign-wrapper l12 m12 s12">
-								<?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'thumbnail', 'class=circle responsive-img left' ); } ?>
+			<?php elseif ( $article > 7 && $article < 20 ) : ?> 
+				
+				<article <?php post_class('bottomlist center col l5 offset-l1 z-depth-1 m6 s12'); ?> id="post-<?php the_ID(); ?>">
+					<header class="valign-wrapper">
+						<div class="left">
+							<?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'thumbnail', array( 'class' => 'z-depth-1 circle' ) ); } ?>
+						</div>
+						<div class="left">
+							<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark">
+								<h2 class="left" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark">
+									<?php the_title(); ?>
+								</h2>
+							</a>
+							<br>
+							<span class="left">
+								<?php get_template_part( 'entry', 'meta' ); ?>
+							</span>
+						</div>
 
-								<?php the_title();  ?>
-							</div>
-						</a>
-					<?php endif ; ?>
-
-					<?php $article++ ; // Increment post number ?>
-				<?php endwhile; endif; ?>
-			</div>
-		</div>
-
-	</section>
+					</header>
+				</article>
 
 
 
-	<!-- Wordpress Footer -->
-	<?php get_footer(); ?>
+			<?php endif; ?>
+			<?php $article++ ; // Increment post number ?>
+		<?php endwhile; endif; ?>
+
+
+	</div>
+
+
+</div>
+
+<!-- Wordpress Footer -->
+<?php get_footer(); ?>

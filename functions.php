@@ -30,10 +30,10 @@ function materialize_filter_wp_title( $title ) {
 add_action( 'widgets_init', 'materialize_widgets_init' );
 function materialize_widgets_init ( ) {
 	register_sidebar( array (
-		'name' => __( 'Sidebar Widget Area', 'materialize' ),
-		'id' => 'primary-widget-area',
-		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
-		'after_widget' => "</li>",
+		'name' => __( 'Index Widget Area', 'index-widget' ),
+		'id' => 'index-widget-area',
+		'before_widget' => '<div class="card">',
+		'after_widget' => "</div>",
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
 		) );
@@ -66,13 +66,39 @@ add_image_size ( 'large','1100', '700', true );
 // Scripts, handle, src, deps, ver, in_footer
 add_action( 'wp_enqueue_scripts', 'materialize_load_scripts' );
 function materialize_load_scripts ( ) {
+	wp_deregister_script( 'jquery' ); // Unload default wp jquery
+
 	wp_enqueue_script ( 'jquery', 'https://code.jquery.com/jquery-2.2.3.min.js', [], '2.2.3', true );
-	wp_enqueue_script( 'materialize', 'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js', ['jquery'], '0.97.6', true );
+
+	// Materialize
+	wp_enqueue_script( 'materialize', 'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js', ['custom-js'], '0.97.6', true );
 	wp_enqueue_style ( 'materialize', 'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css', [], '0.97.6', 'all' );
-	wp_enqueue_style( 'custom-styles', get_stylesheet_uri() );
+
+	// Custom css and js
+	wp_enqueue_style( 'custom-styles', get_template_directory_uri() . '/css/style.css' );
 	wp_enqueue_script( 'custom-js', get_template_directory_uri() . '/js/custom.js', ['jquery'], '1.0.0', true );
 }
 
 
+error_reporting(E_ERROR);
+// Box shortcode
 
+function boxify ( $atts, $content = null ) {
 
+	extract(shortcode_atts(array(
+		'type' => 1,
+		), $atts));
+
+	$classes = 'box card ';
+	$classes .=  $atts['type'] ;
+
+	$return_string = '<div class="' . $classes . '">' . $content .'</div>';
+
+	return $return_string;
+}
+
+function register_shortcodes(){
+	add_shortcode('box', 'boxify');
+}
+
+add_action( 'init', 'register_shortcodes');

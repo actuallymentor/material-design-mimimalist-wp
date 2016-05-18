@@ -1,0 +1,306 @@
+// Colors
+$primary-color-dark:   #1976D2;
+$primary-color:        #2196F3;
+$primary-color-light:  #BBDEFB;
+$primary-color-text:   #FFFFFF;
+$accent-color:         #FF9800;
+$primary-text-color:   #212121;
+$secondary-text-color: #727272;
+$divider-color:        #B6B6B6;
+
+$background:			#F5F5F5;
+
+// Globals
+img {
+	height: auto;
+	width: auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+.nopad {
+	padding: 0 !important;
+}
+
+main {
+	width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: $primary-color;
+}
+h3, h4, h5, h6 {
+	font-weight: 200;
+}
+* {
+	-webkit-transition-duration: 0.3s; /* Safari */
+	transition-duration: 0.3s;
+}
+
+// Header
+
+.navbar {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	nav#main-nav {
+		background-color: $primary-color-dark;
+		.nav-wrapper {
+			ul {
+				display: inline-block;
+			}
+			div {
+				text-align: center;
+			}
+		}
+	}
+}
+#header-intro {
+	height: 100vh;
+	background-color: $primary-color;
+	.valign-wrapper {
+		height: 100%;
+	}
+	#subtitle {
+		font-style: italic;
+	}
+}
+
+// Container
+
+#container {
+	#content {
+		padding-top: 50px;
+	}
+}
+
+// Index
+
+.home {
+	.featured {
+		padding: 5em 0;
+		h2 {
+			font-size: 2em;
+			color: black;
+		}
+	}
+	.smalllist {
+		padding: 20px;
+		header {
+			min-height: 300px;
+			padding: 20px;
+		}
+		h2 {
+			font-size: 1.2em;
+			color: black;
+		}
+	}
+	article.bottomlist {
+		h2 {
+			font-size: 1em;
+			color: black;
+			margin: 0;
+		}
+		img {
+			height: 100px;
+			width: 100px;
+			margin-right: 20px;
+		}
+		padding: 15px;
+		margin: 10px 0;
+	}
+}
+
+.card-image.black {
+	img {
+		// opacity: 0.8;
+	}
+	.entry-title {
+		width: 100%;
+		background-color: $divider-color;
+	}
+}
+article {
+	&.featured {
+
+	}
+	&.medium {
+		.entry-title {
+			font-size: 1.2em;
+		}
+	}
+	&.small {
+		.entry-title {
+			font-size: 1em;
+		}
+	}
+}
+
+#archive {
+	margin: 3em 0;
+	.collection{
+		padding: 20px;
+		.valign-wrapper {
+			padding: 20px 0;
+			img {
+				margin-right: 20px;
+			}
+		}
+		.collection-item {
+			font-size: 1.5em;
+		}
+		a {
+			color: black;
+		}
+		img {
+			height: 50px;
+			width: 50px;
+		}
+	}
+
+}
+
+// Single
+.single {
+	#container {
+		#content {
+			padding-top: 0;
+			margin-top: -50px;
+		}
+	}
+	.col {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.entry-content {
+		ul {
+			padding-left: 45px;
+			margin: 25px 0;
+			li {
+				list-style-type: disc;
+			}
+		}
+	}
+	.featuredimage {
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	.entry-meta {
+		font-style: italic;
+		a {
+			color: white;
+		}
+	}	
+	#comments {
+		padding-top: 30px;
+		margin-top: 30px;
+		border-top: 1px solid $divider-color;
+		ul#listed-comments {
+			li {
+				ul li {
+					padding-left: 20px;
+				}
+				article {
+					padding: 20px;
+					position: relative;
+					margin: 0.5rem 0 1rem 0;
+					background-color: #fff;
+					transition: box-shadow .25s;
+					border-radius: 2px;
+					box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+					p {
+						margin: 0;
+					}
+					a {
+						font-size: 0.8em;
+					}
+					.comment-author.vcard {
+						float: left;
+						display: -webkit-flex;
+						display: -ms-flexbox;
+						display: flex;
+						-webkit-align-items: center;
+						-ms-flex-align: center;
+						align-items: center;
+						b, span {
+							padding-left: 10px;
+						}
+						img {
+							border-radius: 50%;
+						}
+					}
+
+					.comment-metadata {
+						float: right;
+					}
+
+					footer.comment-meta {
+						display: inline-block;
+						width: 100%;
+					}
+				}
+			}
+			.comment-meta a {
+				font-size: 15px;
+				font-style: italic;
+				color: $primary-text-color;
+			}
+		}
+		#respond #commentform {
+			box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+			position: relative;
+			margin: 0.5rem 0 1rem 0;
+			background-color: #fff;
+			transition: box-shadow .25s;
+			border-radius: 2px;
+			padding: 20px;
+			textarea {
+				height: 8rem;
+				border: 1px $divider-color solid;
+				border-radius: 2px;
+			}
+			#submit {
+				color: #fff;
+				background-color: $primary-color;
+				text-align: center;
+				transition: .2s ease-out;
+				cursor: pointer;
+				border: none;
+				border-radius: 2px;
+				display: inline-block;
+				padding: 10px;
+				text-transform: uppercase;
+				vertical-align: middle;
+				-webkit-tap-highlight-color: transparent;
+				box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+				font-size: 0.8em;
+			}
+		}
+	}
+}
+
+// Shortcode stuff
+.box {
+	width: 100%;
+	display: inline-block;
+	padding: 20px;
+}
+
+
+// Footer
+
+footer.page-footer {
+	background-color: $primary-color;
+}
+
+// Make it sticky
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+main {
+	flex: 1 0 auto;
+}

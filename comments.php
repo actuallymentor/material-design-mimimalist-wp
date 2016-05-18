@@ -13,8 +13,24 @@
 				<div class="paginated-comments-links"><?php paginate_comments_links(); ?></div>
 			</nav>
 		<?php endif; ?>
-		<ul>
-			<?php wp_list_comments( 'type=comment' ); ?>
+		<ul id="listed-comments">
+			<?php 
+			$args = array(
+				'walker'            => null,
+				'max_depth'         => '',
+				'style'             => 'ul class="card',
+				'end-callback'      => null,
+				'type'              => 'comment',
+				'reply_text'        => 'Reply',
+				'page'              => '',
+				'avatar_size'       => 32,
+				'reverse_top_level' => null,
+				'reverse_children'  => '',
+				'format'            => 'html5',
+				'echo'              => true
+				);
+			wp_list_comments( $args );
+			?>
 		</ul>
 		<?php if ( get_comment_pages_count() > 1 ) : ?>
 			<nav id="comments-nav-below" class="comments-navigation" role="navigation">
