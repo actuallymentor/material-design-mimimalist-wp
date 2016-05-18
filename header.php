@@ -28,8 +28,8 @@
 						</a>
 						<h2 id="subtitle" class="valign white-text center-align col l12 m12 s12"><?php bloginfo( 'description' ); ?></h2>
 
-					<!-- Blog page stuff -->
-					<?php elseif ( is_single (  )  ): ?>
+						<!-- Blog page stuff -->
+					<?php elseif ( is_single (  )   ): ?>
 						<a id="title" class="valign white-text center-align col l12 m12 s12" href="<?php echo get_option('siteurl') ?>">
 							<?php echo esc_html( get_bloginfo( 'name' ) ); ?>
 						</a>
@@ -40,6 +40,20 @@
 							<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 								<?php if ( ! ( is_front_page() || is_home() || is_archive() || is_search() )  ) get_template_part( 'entry', 'meta' ); ?>
 							<?php endwhile; endif; ?>
+							
+						</div>
+
+						<!-- Archives page stuff -->
+					<?php elseif ( is_archive (  )   ): ?>
+						<a id="title" class="valign white-text center-align col l12 m12 s12" href="<?php echo get_option('siteurl') ?>">
+							<?php echo esc_html( get_bloginfo( 'name' ) ); ?>
+						</a>
+						<header>
+						<a href="<?php get_permalink(); ?>" title="<?php the_archive_title(); ?>">
+							<h1 id="subtitle" class="valign white-text center-align col l12 m12 s12"><?php the_archive_title( 'Posts with ' ); ?></h1>
+						</a>
+						</header>
+
 							
 						</div>
 					<?php endif; ?>
