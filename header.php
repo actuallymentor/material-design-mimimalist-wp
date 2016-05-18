@@ -21,15 +21,17 @@
 			<div class="col l12 s12 valign-wrapper">
 				<div class="container center">
 
+					<!-- Home page -->
 					<?php if ( is_front_page() || is_home() || is_front_page() && is_home() ): ?>
-						<a href="<?php echo get_option('siteurl') ?>">
-							<h1 id="title" class="valign white-text center-align col l12 m12 s12"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></h1>
+						<a id="title" class="valign white-text center-align col l12 m12 s12" href="<?php echo get_option('siteurl') ?>">
+							<h1><?php echo esc_html( get_bloginfo( 'name' ) ); ?></h1>
 						</a>
 						<h2 id="subtitle" class="valign white-text center-align col l12 m12 s12"><?php bloginfo( 'description' ); ?></h2>
 
+					<!-- Blog page stuff -->
 					<?php elseif ( is_single (  )  ): ?>
-						<a href="<?php echo get_option('siteurl') ?>">
-							<span id="title" class="valign white-text center-align col l12 m12 s12"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></span>
+						<a id="title" class="valign white-text center-align col l12 m12 s12" href="<?php echo get_option('siteurl') ?>">
+							<?php echo esc_html( get_bloginfo( 'name' ) ); ?>
 						</a>
 						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
 							<h1 id="subtitle" class="valign white-text center-align col l12 m12 s12"><?php the_title(); ?></h1>
