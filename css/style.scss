@@ -96,7 +96,7 @@ html body {
 
 // Index
 
-.home, .archive {
+.search, .home, .archive {
 	article {
 		&.smalllist, &.featured{
 			& {
@@ -159,6 +159,7 @@ html body {
 		}
 		padding: 15px;
 		margin: 10px 0;
+		min-height: 136px;
 	}
 }
 

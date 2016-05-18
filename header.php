@@ -60,7 +60,16 @@
 							<h1><?php echo esc_html( get_bloginfo( 'name' ) ); ?></h1>
 						</a>
 						<header>
-								<h2 id="subtitle" class="valign white-text center-align col l12 m12 s12">Oh no! Page not found!</h2>
+							<h2 id="subtitle" class="valign white-text center-align col l12 m12 s12">Oh no! Page not found!</h2>
+						</header>
+
+						<!-- Archives page stuff -->
+					<?php elseif ( is_search (  )   ): ?>
+						<a id="title" class="valign white-text center-align col l12 m12 s12" href="<?php echo get_option('siteurl') ?>">
+							<h1><?php echo esc_html( get_bloginfo( 'name' ) ); ?></h1>
+						</a>
+						<header>
+							<h2 id="subtitle" class="valign white-text center-align col l12 m12 s12"><?php printf( __( 'Search Results for: %s', 'materialize' ), get_search_query() ); ?></h2>
 						</header>
 
 
