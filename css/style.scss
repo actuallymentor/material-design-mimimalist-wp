@@ -353,6 +353,11 @@ article {
 
 footer.page-footer {
 	background-color: $primary-color;
+	.footwidget {
+		a {
+			color: white;
+		}
+	}
 }
 
 // Make it sticky

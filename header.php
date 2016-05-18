@@ -66,6 +66,8 @@
 
 					<?php endif; ?>
 
+					<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Header Widget") ) : ?><?php endif;?>
+
 				</div>
 			</div>
 		</div>

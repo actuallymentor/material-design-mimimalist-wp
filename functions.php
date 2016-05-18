@@ -30,12 +30,44 @@ function materialize_filter_wp_title( $title ) {
 add_action( 'widgets_init', 'materialize_widgets_init' );
 function materialize_widgets_init ( ) {
 	register_sidebar( array (
-		'name' => __( 'Index Widget Area', 'index-widget' ),
-		'id' => 'index-widget-area',
-		'before_widget' => '<div class="card">',
+		'name' => __( 'Footer Widget Area 1', 'footer-widget-1' ),
+		'id' => 'footer-widget-area-1',
+		'before_widget' => '<div class="footwidget col l3 m6 s12">',
 		'after_widget' => "</div>",
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
+		'before_title' => '<h5 class="widget-title">',
+		'after_title' => '</h5>',
+		) );
+	register_sidebar( array (
+		'name' => __( 'Footer Widget Area 2', 'footer-widget-2' ),
+		'id' => 'footer-widget-area-2',
+		'before_widget' => '<div class="footwidget col l3 m6 s12">',
+		'after_widget' => "</div>",
+		'before_title' => '<h5 class="widget-title">',
+		'after_title' => '</h5>',
+		) );
+	register_sidebar( array (
+		'name' => __( 'Footer Widget Area 3', 'footer-widget-3' ),
+		'id' => 'footer-widget-area-3',
+		'before_widget' => '<div class="footwidget col l3 m6 s12">',
+		'after_widget' => "</div>",
+		'before_title' => '<h5 class="widget-title">',
+		'after_title' => '</h5>',
+		) );
+	register_sidebar( array (
+		'name' => __( 'Footer Widget Area 4', 'footer-widget-4' ),
+		'id' => 'footer-widget-area-4',
+		'before_widget' => '<div class="footwidget col l3 m6 s12">',
+		'after_widget' => "</div>",
+		'before_title' => '<h5 class="widget-title">',
+		'after_title' => '</h5>',
+		) );
+	register_sidebar( array (
+		'name' => __( 'Header Widget', 'header-widget' ),
+		'id' => 'header-widget',
+		'before_widget' => '<div class="headwidget col l12 m12 s12">',
+		'after_widget' => "</div>",
+		'before_title' => '<h5 class="widget-title">',
+		'after_title' => '</h5>',
 		) );
 }
 function materialize_custom_pings( $comment ) {
