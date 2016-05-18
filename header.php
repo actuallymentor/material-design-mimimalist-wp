@@ -49,22 +49,22 @@
 							<?php echo esc_html( get_bloginfo( 'name' ) ); ?>
 						</a>
 						<header>
-						<a href="<?php get_permalink(); ?>" title="<?php the_archive_title(); ?>">
-							<h1 id="subtitle" class="valign white-text center-align col l12 m12 s12"><?php the_archive_title( 'Posts with ' ); ?></h1>
-						</a>
+							<a href="<?php get_permalink(); ?>" title="<?php the_archive_title(); ?>">
+								<h1 id="subtitle" class="valign white-text center-align col l12 m12 s12"><?php the_archive_title( 'Posts with ' ); ?></h1>
+							</a>
 						</header>
 
-							
-						</div>
-					<?php endif; ?>
+						
+					</div>
+				<?php endif; ?>
 
-				</div>
 			</div>
 		</div>
+	</div>
 
 
 
 
-	</header>
-	<main id="container">
-		<section class="row container" id="content" role="main">
+</header>
+<main id="container">
+	<section class="row container" id="content" role="main">

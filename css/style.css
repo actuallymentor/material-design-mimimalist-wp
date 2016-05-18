@@ -19,6 +19,8 @@ html body a:hover, html body a h2:hover, html body a h1:hover {
   transition-timing-function: ease; }
 html body .text-depth-1 {
   text-shadow: 0px 8px 5px rgba(0, 0, 0, 0.3); }
+html body .primary {
+  background-color: #2196F3; }
 
 .navbar {
   position: absolute;
