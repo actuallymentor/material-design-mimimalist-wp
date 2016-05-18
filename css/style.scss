@@ -11,31 +11,34 @@ $divider-color:        #B6B6B6;
 $background:			#F5F5F5;
 
 // Globals
-img {
-	height: auto;
-	width: auto;
-	max-width: 100%;
-	max-height: 100%;
-}
-.nopad {
-	padding: 0 !important;
-}
+html body {
+	img {
+		height: auto;
+		width: auto;
+		max-width: 100%;
+		max-height: 100%;
+	}
+	.nopad {
+		padding: 0 !important;
+	}
+	main {
+		width: 100%;
+	}
 
-main {
-	width: 100%;
+	h1, h2, h3, h4, h5, h6 {
+		color: $primary-color;
+	}
+	h3, h4, h5, h6 {
+		font-weight: 200;
+	}
+	
+	// a:hover, a h1:hover, a h2:hover {
+	// 	color: $accent-color !important;
+	// }
+	.text-depth-1 {
+		text-shadow: 0px 8px 5px rgba(0,0,0,0.3);
+	}
 }
-
-h1, h2, h3, h4, h5, h6 {
-	color: $primary-color;
-}
-h3, h4, h5, h6 {
-	font-weight: 200;
-}
-* {
-	-webkit-transition-duration: 0.3s; /* Safari */
-	transition-duration: 0.3s;
-}
-
 // Header
 
 .navbar {
@@ -76,11 +79,24 @@ h3, h4, h5, h6 {
 // Index
 
 .home {
+
+	article {
+		&.bottomlist, header img, header h2, section {
+			-webkit-transition-duration: 0.2s; /* Safari */
+			transition-duration: 0.2s;
+		}
+		
+	}
 	.featured {
 		padding: 5em 0;
 		h2 {
 			font-size: 2em;
 			color: black;
+		}
+	}
+	.entry-meta {
+		a {
+			color: $primary-text-color;
 		}
 	}
 	.smalllist {
@@ -99,6 +115,7 @@ h3, h4, h5, h6 {
 			font-size: 1em;
 			color: black;
 			margin: 0;
+			text-align: left;
 		}
 		img {
 			height: 100px;
@@ -150,6 +167,9 @@ article {
 		}
 		a {
 			color: black;
+			&:hover {
+				color: $accent-color;
+			}
 		}
 		img {
 			height: 50px;
@@ -190,6 +210,9 @@ article {
 		font-style: italic;
 		a {
 			color: white;
+			&:hover {
+				color: $accent-color;
+			}
 		}
 	}	
 	#comments {
@@ -214,6 +237,9 @@ article {
 					}
 					a {
 						font-size: 0.8em;
+						&:hover {
+							color: $accent-color;
+						}
 					}
 					.comment-author.vcard {
 						float: left;

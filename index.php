@@ -8,18 +8,18 @@
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 			<?php if ( $article == 0 ) : ?> 
-				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark">
-					<article <?php post_class('featured center col l12 m12 s12'); ?> id="post-<?php the_ID(); ?>">
-						<header>
-
+				
+				<article <?php post_class('featured center col l12 m12 s12'); ?> id="post-<?php the_ID(); ?>">
+					<header>
+						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark">
 							<?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'thumbnail', array( 'class' => 'circle' ) ); } ?>
 							<h2 href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark"><?php the_title(); ?></h2>
+						</a>
+						<i><?php get_template_part( 'entry', 'meta' ); ?></i>
 
-							<i><?php get_template_part( 'entry', 'meta' ); ?></i>
-
-						</header>
-					</article>
-				</a>
+					</header>
+				</article>
+				
 
 				<!-- New design attempt -->
 			<?php elseif ( $article < 7 ) : ?> 
@@ -40,22 +40,21 @@
 
 
 			<?php elseif ( $article == 7 ) : ?> 
-				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark">
+				
 					<article <?php post_class('featured center col l12 m12 s12'); ?> id="post-<?php the_ID(); ?>">
 						<header>
-
+							<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark">
 							<?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'thumbnail', array( 'class' => 'circle' ) ); } ?>
 							<h2 href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark"><?php the_title(); ?></h2>
-
+							</a>
 							<i><?php get_template_part( 'entry', 'meta' ); ?></i>
 
 						</header>
 					</article>
-				</a>
 
 			<?php elseif ( $article > 7 && $article < 20 ) : ?> 
 				
-				<article <?php post_class('bottomlist center col l5 offset-l1 z-depth-1 m6 s12'); ?> id="post-<?php the_ID(); ?>">
+				<article <?php post_class('bottomlist center col l5 offset-l1 z-depth-1 m12 s12'); ?> id="post-<?php the_ID(); ?>">
 					<header class="valign-wrapper">
 						<div class="left">
 							<?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'thumbnail', array( 'class' => 'z-depth-1 circle' ) ); } ?>
@@ -63,7 +62,7 @@
 						<div class="left">
 							<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark">
 								<h2 class="left" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark">
-									<?php the_title(); ?>
+									<?php the_title( ); ?>
 								</h2>
 							</a>
 							<br>

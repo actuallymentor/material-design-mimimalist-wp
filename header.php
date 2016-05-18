@@ -17,7 +17,7 @@
 		</div>
 
 		<!--Header intro block code-->
-		<div id="header-intro" class="">
+		<div id="header-intro" class="z-depth-1">
 			<div class="col l12 s12 valign-wrapper">
 				<div class="container center">
 					<a href="<?php echo get_option('siteurl') ?>">
@@ -48,4 +48,4 @@
 
 	</header>
 	<main id="container">
-		<section class="col l10 offset-l1 m10 offset-m1 s12 container" id="content" role="main">
+		<section class="row container" id="content" role="main">

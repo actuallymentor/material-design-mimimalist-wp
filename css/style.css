@@ -1,25 +1,18 @@
-img {
+html body img {
   height: auto;
   width: auto;
   max-width: 100%;
   max-height: 100%; }
-
-.nopad {
+html body .nopad {
   padding: 0 !important; }
-
-main {
+html body main {
   width: 100%; }
-
-h1, h2, h3, h4, h5, h6 {
+html body h1, html body h2, html body h3, html body h4, html body h5, html body h6 {
   color: #2196F3; }
-
-h3, h4, h5, h6 {
+html body h3, html body h4, html body h5, html body h6 {
   font-weight: 200; }
-
-* {
-  -webkit-transition-duration: 0.3s;
-  /* Safari */
-  transition-duration: 0.3s; }
+html body .text-depth-1 {
+  text-shadow: 0px 8px 5px rgba(0, 0, 0, 0.3); }
 
 .navbar {
   position: absolute;
@@ -43,11 +36,17 @@ h3, h4, h5, h6 {
 #container #content {
   padding-top: 50px; }
 
+.home article.bottomlist, .home article header img, .home article header h2, .home article section {
+  -webkit-transition-duration: 0.2s;
+  /* Safari */
+  transition-duration: 0.2s; }
 .home .featured {
   padding: 5em 0; }
   .home .featured h2 {
     font-size: 2em;
     color: black; }
+.home .entry-meta a {
+  color: #212121; }
 .home .smalllist {
   padding: 20px; }
   .home .smalllist header {
@@ -62,7 +61,8 @@ h3, h4, h5, h6 {
   .home article.bottomlist h2 {
     font-size: 1em;
     color: black;
-    margin: 0; }
+    margin: 0;
+    text-align: left; }
   .home article.bottomlist img {
     height: 100px;
     width: 100px;
@@ -89,6 +89,8 @@ article.small .entry-title {
       font-size: 1.5em; }
     #archive .collection a {
       color: black; }
+      #archive .collection a:hover {
+        color: #FF9800; }
     #archive .collection img {
       height: 50px;
       width: 50px; }
@@ -111,6 +113,8 @@ article.small .entry-title {
   font-style: italic; }
   .single .entry-meta a {
     color: white; }
+    .single .entry-meta a:hover {
+      color: #FF9800; }
 .single #comments {
   padding-top: 30px;
   margin-top: 30px;
@@ -129,6 +133,8 @@ article.small .entry-title {
       margin: 0; }
     .single #comments ul#listed-comments li article a {
       font-size: 0.8em; }
+      .single #comments ul#listed-comments li article a:hover {
+        color: #FF9800; }
     .single #comments ul#listed-comments li article .comment-author.vcard {
       float: left;
       display: -webkit-flex;
