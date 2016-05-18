@@ -1,7 +1,7 @@
 <!-- WordPress Header -->
 <?php get_header(); ?>
 
-<div class="row">
+<div class="row" id="homewrap">
 	<div class="col nopad l12 m12 s12">
 		<?php $article = 0; // Track post number ?>
 

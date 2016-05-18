@@ -93,6 +93,9 @@ html body .primary {
     width: 100px;
     margin-right: 20px; }
 
+#homewrap {
+  margin-top: -180px; }
+
 .card-image.black .entry-title {
   width: 100%;
   background-color: #B6B6B6; }
