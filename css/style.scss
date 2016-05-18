@@ -63,6 +63,11 @@ html body {
 	.valign-wrapper {
 		height: 100%;
 	}
+	#title {
+		font-size: 4.2rem;
+		line-height: 110%;
+		margin: 2.1rem 0 1.68rem 0;
+	}
 	#subtitle {
 		font-style: italic;
 	}
@@ -79,12 +84,20 @@ html body {
 // Index
 
 .home {
-
 	article {
+		&:hover {
+			img {
+				box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+			}
+			h2, section {
+				text-shadow: 0px 8px 5px rgba(0,0,0,0.3);
+			}
+		}
 		&.bottomlist, header img, header h2, section {
 			-webkit-transition-duration: 0.2s; /* Safari */
 			transition-duration: 0.2s;
 		}
+
 		
 	}
 	.featured {

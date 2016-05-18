@@ -30,12 +30,20 @@ html body .text-depth-1 {
   background-color: #2196F3; }
   #header-intro .valign-wrapper {
     height: 100%; }
+  #header-intro #title {
+    font-size: 4.2rem;
+    line-height: 110%;
+    margin: 2.1rem 0 1.68rem 0; }
   #header-intro #subtitle {
     font-style: italic; }
 
 #container #content {
   padding-top: 50px; }
 
+.home article:hover img {
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+.home article:hover h2, .home article:hover section {
+  text-shadow: 0px 8px 5px rgba(0, 0, 0, 0.3); }
 .home article.bottomlist, .home article header img, .home article header h2, .home article section {
   -webkit-transition-duration: 0.2s;
   /* Safari */
