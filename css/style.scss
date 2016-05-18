@@ -32,9 +32,13 @@ html body {
 		font-weight: 200;
 	}
 	
-	// a:hover, a h1:hover, a h2:hover {
-	// 	color: $accent-color !important;
-	// }
+	a:hover, a h1:hover, a h2:hover {
+		color: $accent-color !important;
+		text-shadow: 0px 8px 5px rgba(0,0,0,0.3);
+		-webkit-transition-duration: 0.2s;
+		transition-duration: 0.2s;
+		transition-timing-function: ease;
+	}
 	.text-depth-1 {
 		text-shadow: 0px 8px 5px rgba(0,0,0,0.3);
 	}
@@ -71,6 +75,10 @@ html body {
 	#subtitle {
 		font-style: italic;
 	}
+	a {
+		-webkit-transition-duration: 0.2s;
+		transition-duration: 0.2s;
+	}
 }
 
 // Container
@@ -85,12 +93,18 @@ html body {
 
 .home {
 	article {
-		&:hover {
-			img {
-				box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+		&.smalllist, &.featured{
+			& {
+				-webkit-transition-duration: 0.2s;
+				transition-duration: 0.2s;
 			}
-			h2, section {
-				text-shadow: 0px 8px 5px rgba(0,0,0,0.3);
+			&:hover {
+				img {
+					box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+				}
+				h2, section {
+					text-shadow: 0px 8px 5px rgba(0,0,0,0.3);
+				}
 			}
 		}
 		&.bottomlist, header img, header h2, section {
@@ -124,6 +138,9 @@ html body {
 		}
 	}
 	article.bottomlist {
+		&:hover {
+			box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+		}
 		h2 {
 			font-size: 1em;
 			color: black;

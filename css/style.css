@@ -11,6 +11,12 @@ html body h1, html body h2, html body h3, html body h4, html body h5, html body 
   color: #2196F3; }
 html body h3, html body h4, html body h5, html body h6 {
   font-weight: 200; }
+html body a:hover, html body a h1:hover, html body a h2:hover {
+  color: #FF9800 !important;
+  text-shadow: 0px 8px 5px rgba(0, 0, 0, 0.3);
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  transition-timing-function: ease; }
 html body .text-depth-1 {
   text-shadow: 0px 8px 5px rgba(0, 0, 0, 0.3); }
 
@@ -36,13 +42,19 @@ html body .text-depth-1 {
     margin: 2.1rem 0 1.68rem 0; }
   #header-intro #subtitle {
     font-style: italic; }
+  #header-intro a {
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s; }
 
 #container #content {
   padding-top: 50px; }
 
-.home article:hover img {
+.home article.smalllist, .home article.featured {
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s; }
+.home article.smalllist:hover img, .home article.featured:hover img {
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
-.home article:hover h2, .home article:hover section {
+.home article.smalllist:hover h2, .home article.smalllist:hover section, .home article.featured:hover h2, .home article.featured:hover section {
   text-shadow: 0px 8px 5px rgba(0, 0, 0, 0.3); }
 .home article.bottomlist, .home article header img, .home article header h2, .home article section {
   -webkit-transition-duration: 0.2s;
@@ -66,6 +78,8 @@ html body .text-depth-1 {
 .home article.bottomlist {
   padding: 15px;
   margin: 10px 0; }
+  .home article.bottomlist:hover {
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
   .home article.bottomlist h2 {
     font-size: 1em;
     color: black;
