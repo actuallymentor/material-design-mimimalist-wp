@@ -31,6 +31,26 @@ html body .primary {
     .navbar nav#main-nav ul {
       display: inline-block;
       text-align: center; }
+      .navbar nav#main-nav ul li {
+        position: relative; }
+  .navbar .brand-logo {
+    padding: 0 10px; }
+  .navbar ul#mobile-nav.side-nav {
+    text-align: left; }
+    .navbar ul#mobile-nav.side-nav .sub-menu {
+      padding-left: 15px; }
+  .navbar #desktopmenu .sub-menu {
+    position: absolute;
+    left: 0;
+    width: 100%; }
+    .navbar #desktopmenu .sub-menu li {
+      width: 100%;
+      display: none;
+      background-color: #1976D2; }
+      .navbar #desktopmenu .sub-menu li a {
+        width: 100%; }
+    .navbar #desktopmenu .sub-menu:hover {
+      display: block; }
   .navbar .navwidget {
     height: 100%;
     padding: 10px 0;
@@ -202,7 +222,13 @@ article.small .entry-title {
     background-color: #fff;
     transition: box-shadow .25s;
     border-radius: 2px;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s; }
+    .single #comments ul#listed-comments li article:hover {
+      box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      -webkit-transition-duration: 0.2s;
+      transition-duration: 0.2s; }
     .single #comments ul#listed-comments li article p {
       margin: 0; }
     .single #comments ul#listed-comments li article a {
@@ -237,7 +263,13 @@ article.small .entry-title {
     background-color: #fff;
     transition: box-shadow .25s;
     border-radius: 2px;
-    padding: 20px; }
+    padding: 20px;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s; }
+    .single #comments #respond #commentform:hover {
+      -webkit-transition-duration: 0.2s;
+      transition-duration: 0.2s;
+      box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
     .single #comments #respond #commentform textarea {
       height: 8rem;
       border: 1px #B6B6B6 solid;
@@ -246,17 +278,19 @@ article.small .entry-title {
       color: #fff;
       background-color: #2196F3;
       text-align: center;
-      transition: .2s ease-out;
-      cursor: pointer;
       border: none;
       border-radius: 2px;
-      display: inline-block;
       padding: 10px;
       text-transform: uppercase;
-      vertical-align: middle;
       -webkit-tap-highlight-color: transparent;
       box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-      font-size: 0.8em; }
+      font-size: 0.8em;
+      -webkit-transition-duration: 0.2s;
+      transition-duration: 0.2s; }
+      .single #comments #respond #commentform #submit:hover {
+        -webkit-transition-duration: 0.2s;
+        transition-duration: 0.2s;
+        box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
 
 .box {
   width: 100%;

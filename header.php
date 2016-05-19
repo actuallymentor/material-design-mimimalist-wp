@@ -11,15 +11,15 @@
 		<div class="navbar">
 			<nav id="main-nav">
 				<div class="nav-wrapper">
-					<a href="/" class="brand-logo">SC</a>
+					<a href="<?php echo get_option('siteurl') ?>" class="brand-logo">SC</a>
 					
 					<!-- Wp Menu -->
-					<div class="center col l12 m12 s12">
-					<?php wp_nav_menu( array( 
-						'theme_location' => 'main-menu',
-						'container' => 'ul',
-						'menu_class' => 'hide-on-med-and-down'
-						) ); ?>
+					<div id="desktopmenu" class="center col l12 m12 s12">
+						<?php wp_nav_menu( array( 
+							'theme_location' => 'main-menu',
+							'container' => 'ul',
+							'menu_class' => 'hide-on-med-and-down'
+							) ); ?>
 						</div>
 
 						<!-- Wp Menu Mobile -->
