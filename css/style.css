@@ -22,12 +22,41 @@ html body .text-depth-1 {
 html body .primary {
   background-color: #2196F3; }
 
-.navbar nav#main-nav {
-  padding: 0 10px;
-  background-color: #1976D2; }
-.navbar .brand-logo {
-  position: relative;
-  padding-right: 10px; }
+.navbar {
+  position: absolute;
+  width: 100%; }
+  .navbar nav#main-nav {
+    padding: 0 10px;
+    background-color: #1976D2; }
+  .navbar .brand-logo {
+    position: relative;
+    padding-right: 10px; }
+  .navbar .navwidget {
+    height: 64px;
+    padding: 10px 0;
+    width: 250px; }
+    .navbar .navwidget form, .navbar .navwidget .input-field, .navbar .navwidget .input-field input {
+      height: 100%;
+      width: 100%; }
+    .navbar .navwidget ::-webkit-input-placeholder {
+      font-size: 1rem; }
+    .navbar .navwidget :-moz-placeholder {
+      font-size: 1rem; }
+    .navbar .navwidget ::-moz-placeholder {
+      font-size: 1rem; }
+    .navbar .navwidget :-ms-input-placeholder {
+      font-size: 1rem; }
+    .navbar .navwidget .input-field input[type=search] {
+      padding: 0 20px;
+      margin: 0;
+      background: url(../img/search.svg) no-repeat scroll 0 1px;
+      background-position: 0% 2px;
+      background-size: 15px 100%; }
+      .navbar .navwidget .input-field input[type=search]:focus {
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        background: white;
+        padding: 0 10px;
+        width: 90%; }
 
 #header-intro {
   height: 100vh;
