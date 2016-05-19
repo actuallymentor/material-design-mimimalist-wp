@@ -11,25 +11,25 @@
 		<div class="navbar">
 			<nav id="main-nav">
 				<div class="nav-wrapper">
-					<a href="/" class="brand-logo left">SC</a>
+					<a href="/" class="brand-logo">SC</a>
 					
 					<!-- Wp Menu -->
-					<?php wp_nav_menu( array( 
-						'theme_location' => 'main-menu',
-						'container' => 'ul',
-						'menu_class' => 'hide-on-med-and-down'
-						) ); ?>
+					<div class="center col l12 m12 s12">
+						<?php wp_nav_menu( array( 
+							'theme_location' => 'main-menu',
+							'container' => 'ul',
+							'menu_class' => 'hide-on-med-and-down'
+							) ); ?>
+						</div>
 
-					<!-- Wp Menu Mobile -->
-					<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-					<?php wp_nav_menu( array( 
-						'theme_location' => 'main-menu',
-						'container' => 'ul',
-						'menu_class' => 'side-nav',
-						'menu_id' => 'mobile'
-						) ); ?>
-
-
+						<!-- Wp Menu Mobile -->
+						<a href="#" data-activates="mobile" class="button-collapse left"><i class="material-icons">menu</i></a>
+						<?php wp_nav_menu( array( 
+							'theme_location' => 'main-menu',
+							'container' => 'ul',
+							'menu_class' => 'side-nav hide-on-med-and-up',
+							'menu_id' => 'mobile'
+							) ); ?>
 
 							<!-- Nav Widget -->
 							<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Nav Widget") ) : ?><?php endif;?>

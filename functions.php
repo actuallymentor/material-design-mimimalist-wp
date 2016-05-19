@@ -72,7 +72,7 @@ function materialize_widgets_init ( ) {
 	register_sidebar( array (
 		'name' => __( 'Nav Widget', 'nav-widget' ),
 		'id' => 'nav-widget',
-		'before_widget' => '<div class="navwidget right">',
+		'before_widget' => '<div class="navwidget hide-on-med-and-down right">',
 		'after_widget' => "</div>",
 		'before_title' => '',
 		'after_title' => '',
@@ -110,10 +110,10 @@ function materialize_load_scripts ( ) {
 
 	// Dependencies
 	wp_enqueue_script ( 'jquery', 'https://code.jquery.com/jquery-2.2.3.min.js', [], '2.2.3', true );
-	// wp_enqueue_style ( 'material-icons', 'http://fonts.googleapis.com/icon?family=Material+Icons', [], '0.97.6', 'all' );
+	wp_enqueue_style ( 'material-icons', 'http://fonts.googleapis.com/icon?family=Material+Icons', [], '0.97.6', 'all' );
 
 	// Materialize
-	wp_enqueue_script( 'materialize-js', 'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js', [], '0.97.6', true );
+	wp_enqueue_script( 'materialize-js', 'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js', ['jquery'], '0.97.6', true );
 	wp_enqueue_style ( 'materialize', 'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css', [], '0.97.6', 'all' );
 
 	// Custom css and js
