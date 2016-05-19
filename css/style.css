@@ -14,9 +14,10 @@ html body h3, html body h4, html body h5, html body h6 {
 html body a:hover, html body a h2:hover, html body a h1:hover {
   color: #FF9800 !important;
   text-shadow: 0px 8px 5px rgba(0, 0, 0, 0.3);
-  -webkit-transition-duration: 0.2s;
-  transition-duration: 0.2s;
-  transition-timing-function: ease; }
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
 html body .text-depth-1 {
   text-shadow: 0px 8px 5px rgba(0, 0, 0, 0.3); }
 html body .primary {
@@ -46,11 +47,17 @@ html body .primary {
     .navbar #desktopmenu .sub-menu li {
       width: 100%;
       display: none;
-      background-color: #1976D2; }
+      background-color: rgba(0, 0, 0, 0.1);
+      margin: 4px 0px;
+      border-radius: 2px; }
       .navbar #desktopmenu .sub-menu li a {
         width: 100%; }
     .navbar #desktopmenu .sub-menu:hover {
-      display: block; }
+      display: block;
+      -webkit-transition: all 0.2s ease;
+      -moz-transition: all 0.2s ease;
+      -o-transition: all 0.2s ease;
+      transition: all 0.2s ease; }
   .navbar .navwidget {
     height: 100%;
     padding: 10px 0;
@@ -100,24 +107,29 @@ html body .primary {
   #header-intro #subtitle {
     font-style: italic; }
   #header-intro a {
-    -webkit-transition-duration: 0.2s;
-    transition-duration: 0.2s; }
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease; }
 
 #container #content {
   padding-top: 50px;
   margin-top: -125px; }
 
 .search article.smalllist, .search article.featured, .home article.smalllist, .home article.featured, .archive article.smalllist, .archive article.featured {
-  -webkit-transition-duration: 0.2s;
-  transition-duration: 0.2s; }
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
 .search article.smalllist:hover img, .search article.featured:hover img, .home article.smalllist:hover img, .home article.featured:hover img, .archive article.smalllist:hover img, .archive article.featured:hover img {
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
 .search article.smalllist:hover h2, .search article.smalllist:hover section, .search article.featured:hover h2, .search article.featured:hover section, .home article.smalllist:hover h2, .home article.smalllist:hover section, .home article.featured:hover h2, .home article.featured:hover section, .archive article.smalllist:hover h2, .archive article.smalllist:hover section, .archive article.featured:hover h2, .archive article.featured:hover section {
   text-shadow: 0px 8px 5px rgba(0, 0, 0, 0.3); }
 .search article.bottomlist, .search article header img, .search article header h2, .search article section, .home article.bottomlist, .home article header img, .home article header h2, .home article section, .archive article.bottomlist, .archive article header img, .archive article header h2, .archive article section {
-  -webkit-transition-duration: 0.2s;
-  /* Safari */
-  transition-duration: 0.2s; }
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
 .search .featured, .home .featured, .archive .featured {
   padding: 5em 0; }
   .search .featured h2, .home .featured h2, .archive .featured h2 {
@@ -202,13 +214,17 @@ article.small .entry-title {
 .single iframe {
   width: 100%; }
 .single img, .single iframe {
-  -webkit-transition-duration: 0.2s;
-  transition-duration: 0.2s;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
   .single img:hover, .single iframe:hover {
     box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    -webkit-transition-duration: 0.2s;
-    transition-duration: 0.2s; }
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease; }
 .single #comments {
   padding-top: 30px;
   margin-top: 30px;
@@ -261,14 +277,17 @@ article.small .entry-title {
     position: relative;
     margin: 0.5rem 0 1rem 0;
     background-color: #fff;
-    transition: box-shadow .25s;
     border-radius: 2px;
     padding: 20px;
-    -webkit-transition-duration: 0.2s;
-    transition-duration: 0.2s; }
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease; }
     .single #comments #respond #commentform:hover {
-      -webkit-transition-duration: 0.2s;
-      transition-duration: 0.2s;
+      -webkit-transition: all 0.2s ease;
+      -moz-transition: all 0.2s ease;
+      -o-transition: all 0.2s ease;
+      transition: all 0.2s ease;
       box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
     .single #comments #respond #commentform textarea {
       height: 8rem;
@@ -285,11 +304,15 @@ article.small .entry-title {
       -webkit-tap-highlight-color: transparent;
       box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
       font-size: 0.8em;
-      -webkit-transition-duration: 0.2s;
-      transition-duration: 0.2s; }
+      -webkit-transition: all 0.2s ease;
+      -moz-transition: all 0.2s ease;
+      -o-transition: all 0.2s ease;
+      transition: all 0.2s ease; }
       .single #comments #respond #commentform #submit:hover {
-        -webkit-transition-duration: 0.2s;
-        transition-duration: 0.2s;
+        -webkit-transition: all 0.2s ease;
+        -moz-transition: all 0.2s ease;
+        -o-transition: all 0.2s ease;
+        transition: all 0.2s ease;
         box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
 
 .box {

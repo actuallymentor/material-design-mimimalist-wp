@@ -16,6 +16,12 @@ $background:			#F5F5F5;
 	::-moz-placeholder          {@content}
 	:-ms-input-placeholder      {@content}  
 }
+@mixin smoothtransition {
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+}
 
 // Globals
 html body {
@@ -43,9 +49,7 @@ html body {
 	a:hover, a h2:hover, a h1:hover {
 		color: $accent-color !important;
 		text-shadow: 0px 8px 5px rgba(0,0,0,0.3);
-		-webkit-transition-duration: 0.2s;
-		transition-duration: 0.2s;
-		transition-timing-function: ease;
+		@include smoothtransition;
 	}
 	.text-depth-1 {
 		text-shadow: 0px 8px 5px rgba(0,0,0,0.3);
@@ -87,13 +91,16 @@ html body {
 		li {
 			width: 100%;
 			display: none;
-			background-color: $primary-color-dark;
+			background-color: rgba(0,0,0,0.1);
+			margin: 4px 0px;
+			border-radius: 2px;
 			a {
 				width: 100%;
 			}
 		}
 		&:hover {
 			display: block;
+			@include smoothtransition;
 		}
 	}
 	.navwidget {
@@ -149,8 +156,7 @@ html body {
 		font-style: italic;
 	}
 	a {
-		-webkit-transition-duration: 0.2s;
-		transition-duration: 0.2s;
+		@include smoothtransition;
 	}
 }
 
@@ -169,8 +175,7 @@ html body {
 	article {
 		&.smalllist, &.featured {
 			& {
-				-webkit-transition-duration: 0.2s;
-				transition-duration: 0.2s;
+				@include smoothtransition;
 			}
 			&:hover {
 				img {
@@ -182,8 +187,7 @@ html body {
 			}
 		}
 		&.bottomlist, header img, header h2, section {
-			-webkit-transition-duration: 0.2s; /* Safari */
-			transition-duration: 0.2s;
+			@include smoothtransition;
 		}
 
 		
@@ -328,13 +332,11 @@ article {
 		width: 100%;
 	}
 	img, iframe {
-		-webkit-transition-duration: 0.2s;
-		transition-duration: 0.2s;
+		@include smoothtransition;
 		box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
 		&:hover {
 			box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-			-webkit-transition-duration: 0.2s;
-			transition-duration: 0.2s;
+			@include smoothtransition;
 		}
 	}
 	#comments {
@@ -407,14 +409,11 @@ article {
 			position: relative;
 			margin: 0.5rem 0 1rem 0;
 			background-color: #fff;
-			transition: box-shadow .25s;
 			border-radius: 2px;
 			padding: 20px;
-			-webkit-transition-duration: 0.2s;
-			transition-duration: 0.2s;
+			@include smoothtransition;
 			&:hover {
-				-webkit-transition-duration: 0.2s;
-				transition-duration: 0.2s;
+				@include smoothtransition;
 				box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
 			}
 			textarea {
@@ -433,11 +432,9 @@ article {
 				-webkit-tap-highlight-color: transparent;
 				box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
 				font-size: 0.8em;
-				-webkit-transition-duration: 0.2s;
-				transition-duration: 0.2s;
+				@include smoothtransition;
 				&:hover {
-					-webkit-transition-duration: 0.2s;
-					transition-duration: 0.2s;
+					@include smoothtransition;
 					box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
 				}
 			}

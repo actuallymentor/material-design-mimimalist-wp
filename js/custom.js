@@ -7,13 +7,21 @@ $ ( document ).on ( 'ready', function (  ) {
 	$ ( '#desktopmenu .menu-item-has-children' ).hover (
 		function (  ) {
 			console.log ( 'Hovered child containing menu' ) 
-			$ ( '.sub-menu li', this ).fadeIn ( 200, function (  ) {
+			$ ( '.sub-menu li', this ).fadeIn ( 100, function (  ) {
 				$ ( this ).addClass ( 'z-depth-1' )  
 			}  )  
 		},
 		function (  ) {
-			$ ( '.sub-menu li', this ).addClass ( 'z-depth-1' )  
+			$ ( '.sub-menu li', this ).removeClass ( 'z-depth-1' )  
 			$ ( '.sub-menu li', this ).fadeOut ( 200 ) 
+		}
+	)
+	$ ( '#desktopmenu .menu-item-has-children .sub-menu li' ).hover (
+		function (  ) {
+				$ ( this ).addClass ( 'z-depth-2' )  
+		},
+		function (  ) {
+			$ ( this ).removeClass ( 'z-depth-2' )  
 		}
 	)
 	// End of menu hovering  
