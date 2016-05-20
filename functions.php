@@ -97,10 +97,11 @@ function materialize_comments_number( $count ) {
 
 // Add thumbnail support
 add_theme_support( 'post-thumbnails' );
-add_image_size ( 'thumbnail','50', '50', true );
+add_image_size ( 'thumbnail','150', '150', true );
 add_image_size ( 'small','250', '250', true );
 add_image_size ( 'medium','550', '400', true );
-add_image_size ( 'large','1100', '700', true );
+add_image_size ( 'large','900', '600', true );
+add_image_size ( 'schema','696', '696', true );
 
 
 // Scripts, handle, src, deps, ver, in_footer
@@ -144,3 +145,6 @@ function register_shortcodes(){
 }
 
 add_action( 'init', 'register_shortcodes');
+
+// Schema support
+include ( get_template_directory() . '/functions/schema.php' );

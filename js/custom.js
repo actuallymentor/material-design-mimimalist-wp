@@ -33,12 +33,15 @@ var lazyblock = function ( context )  {
 	}	
 }
 var lazyload = function  (  )  {
-	console.log ( 'Lazyload triggered' ) 
-	$ ( this ).attr ( 'src', $ ( this ).attr ( 'lazy' )   )
-	$ ( this ).attr ( 'srcset', $ ( this ).attr ( 'lazyset' )   )
-	$ ( this ).attr ( 'lazy', '' ) 
-	$ ( this ).attr ( 'lazysrc', '' ) 
+	if  ( $ ( this ).attr ( 'lazy' ).length > 0   ) {
+		console.log ( 'Lazyload triggered' ) 
+		$ ( this ).attr ( 'src', $ ( this ).attr ( 'lazy' )   )
+		$ ( this ).attr ( 'srcset', $ ( this ).attr ( 'lazyset' )   )
+		$ ( this ).attr ( 'lazy', '' ) 
+		$ ( this ).attr ( 'lazysrc', '' ) 
+	}
 }
+
 
 // jQuery actions after DOM loading is complete
 $ ( document ).on ( 'ready', function (  ) {
@@ -65,7 +68,6 @@ $ ( document ).on ( 'ready', function (  ) {
 	// Make buttons pretty
 	$ ( 'input[type=submit]', '#content' ).addClass ( 'btn' )  
 
-	// Block lazy images
 
 
 	// End of menu hovering  
