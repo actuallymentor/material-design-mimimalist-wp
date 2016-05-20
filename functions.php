@@ -122,7 +122,7 @@ function materialize_load_scripts ( ) {
 }
 
 
-error_reporting(E_ERROR);
+// error_reporting(E_ERROR);
 // Box shortcode
 
 function boxify ( $atts, $content = null ) {

@@ -46,10 +46,10 @@ $ ( document ).on ( 'ready', function (  ) {
 
 	// Lazyload implementation
 		//Lazyblock
-		lazyblock ( '#article, #homewrap' ) 
+		lazyblock ( '#article' ) 
 		//Lazyload
-		$('img', '#article, #homewrap').scrollSpy (  )
-		$('img', '#article, #homewrap').on ( 'scrollSpy:enter', lazyload ) 
+		$('img', '#article').scrollSpy (  )
+		$('img', '#article').on ( 'scrollSpy:enter', lazyload ) 
 
 
 	// Initialize mobile nav
