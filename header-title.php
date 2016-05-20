@@ -13,5 +13,7 @@
 		?>
 	</h1>
 </a>
-<?php (is_single (  ) ) ? get_template_part( 'entry', 'meta' ) : ''; ?>
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+	<?php (is_single (  ) ) ? get_template_part( 'entry', 'meta' ) : ''; ?>
+<?php endwhile; endif;?>
 </a>
