@@ -17,15 +17,40 @@ var menufadeout = function (  ) {
 // Depth controllers
 
 var depthadd = function ( ) {
-		$ ( this ).addClass ( 'z-depth-2' )
+	$ ( this ).addClass ( 'z-depth-2' )
 }
 var depthrem = function (  ) {
 	$ ( this ).removeClass ( 'z-depth-2' )
 }
 
+var lazyblock = function ( context )  {
+	var imagelist = $ ( 'img', context)
+	for  ( var i = 0; i < imagelist.length; i++ ) {
+		$ ( imagelist[i] ).attr ( 'lazy', $ ( imagelist[i] ).attr ( 'src' )   )
+		$ ( imagelist[i] ).attr ( 'lazyset', $ ( imagelist[i] ).attr ( 'srcset' )   )
+		$ ( imagelist[i] ).attr ( 'src', '' ) 
+		$ ( imagelist[i] ).attr ( 'srcset', '' ) 
+	}	
+}
+var lazyload = function  (  )  {
+	console.log ( 'Lazyload triggered' ) 
+	$ ( this ).attr ( 'src', $ ( this ).attr ( 'lazy' )   )
+	$ ( this ).attr ( 'srcset', $ ( this ).attr ( 'lazyset' )   )
+	$ ( this ).attr ( 'lazy', '' ) 
+	$ ( this ).attr ( 'lazysrc', '' ) 
+}
+
 // jQuery actions after DOM loading is complete
 $ ( document ).on ( 'ready', function (  ) {
 	console.log ( 'DOM ready' ) 
+
+	// Lazyload implementation
+		//Lazyblock
+		lazyblock ( '#article, #homewrap' ) 
+		//Lazyload
+		$('img', '#article, #homewrap').scrollSpy (  )
+		$('img', '#article, #homewrap').on ( 'scrollSpy:enter', lazyload ) 
+
 
 	// Initialize mobile nav
 	$("#button-collapse").sideNav()
@@ -39,6 +64,9 @@ $ ( document ).on ( 'ready', function (  ) {
 
 	// Make buttons pretty
 	$ ( 'input[type=submit]', '#content' ).addClass ( 'btn' )  
+
+	// Block lazy images
+
 
 	// End of menu hovering  
 } )  

@@ -6,7 +6,7 @@
 		<?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'large', ['class' => 'z-depth-1'] ); } ?>
 	</div>
 
-	<article>
+	<article id="article">
 		<div class="col l8 offset-l2 m12 s12 flow-text contents">
 			<?php get_template_part( 'entry', 'content' ); ?>
 		</div>
