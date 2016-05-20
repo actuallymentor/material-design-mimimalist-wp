@@ -8,7 +8,7 @@
 
 
 		<div class="col l8 offset-l2 m12 s12 flow-text contents">
-			<?php get_template_part( 'entry', ( is_front_page() || is_home() || is_archive() || is_search() ? 'summary' : 'content' ) ); ?>
+			<?php get_template_part( 'entry', 'content' ); ?>
 		</div>
 
 		<div class="col l8 offset-l2 m12 s12 commentwrap">
