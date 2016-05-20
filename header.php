@@ -6,7 +6,7 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-	<header id="header" role="banner">
+	<div id="header" role="banner">
 		<!-- Header block -->
 		<div class="navbar">
 			<nav id="main-nav">
@@ -60,6 +60,6 @@
 
 
 
-</header>
+</div>
 <main id="container">
 	<section class="row container" id="content" role="main">
