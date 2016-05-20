@@ -57,6 +57,14 @@ html body {
 	.primary {
 		background-color: $primary-color;
 	}
+	.flow-text {
+		@media screen and  ( min-width: 700px ) {
+			zoom: 0.9;
+		}
+		@media screen and  ( min-width: 960px ) {
+			zoom: 0.8;
+		}
+	}
 }
 
 // Header
@@ -64,7 +72,7 @@ html body {
 .navbar {
 	position: absolute;
 	width: 100%;
-	nav#main-nav {
+	#main-nav {
 		padding: 0 10px;
 		background-color: $primary-color-dark;
 		ul {
@@ -78,7 +86,7 @@ html body {
 	.brand-logo {
 		padding: 0 10px;
 	}
-	ul#mobile-nav.side-nav {
+	#mobile-nav.side-nav {
 		text-align: left;
 		.sub-menu {
 			padding-left: 15px;
@@ -308,6 +316,9 @@ article {
 		padding-right: 0;
 	}
 	.entry-content {
+		div, img, ul, li, p {
+			max-width: 100%;
+		}
 		ul {
 			padding-left: 45px;
 			margin: 25px 0;
@@ -346,7 +357,7 @@ article {
 		padding-top: 30px;
 		margin-top: 30px;
 		border-top: 1px solid $divider-color;
-		ul#listed-comments {
+		#listed-comments {
 			li {
 				ul li {
 					padding-left: 20px;

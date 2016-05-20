@@ -22,23 +22,29 @@ html body .text-depth-1 {
   text-shadow: 0px 8px 5px rgba(0, 0, 0, 0.3); }
 html body .primary {
   background-color: #2196F3; }
+@media screen and (min-width: 700px) {
+  html body .flow-text {
+    zoom: 0.9; } }
+@media screen and (min-width: 960px) {
+  html body .flow-text {
+    zoom: 0.8; } }
 
 .navbar {
   position: absolute;
   width: 100%; }
-  .navbar nav#main-nav {
+  .navbar #main-nav {
     padding: 0 10px;
     background-color: #1976D2; }
-    .navbar nav#main-nav ul {
+    .navbar #main-nav ul {
       display: inline-block;
       text-align: center; }
-      .navbar nav#main-nav ul li {
+      .navbar #main-nav ul li {
         position: relative; }
   .navbar .brand-logo {
     padding: 0 10px; }
-  .navbar ul#mobile-nav.side-nav {
+  .navbar #mobile-nav.side-nav {
     text-align: left; }
-    .navbar ul#mobile-nav.side-nav .sub-menu {
+    .navbar #mobile-nav.side-nav .sub-menu {
       padding-left: 15px; }
   .navbar #desktopmenu .sub-menu {
     position: absolute;
@@ -199,6 +205,8 @@ article.small .entry-title {
 .single .col {
   padding-left: 0;
   padding-right: 0; }
+.single .entry-content div, .single .entry-content img, .single .entry-content ul, .single .entry-content li, .single .entry-content p {
+  max-width: 100%; }
 .single .entry-content ul {
   padding-left: 45px;
   margin: 25px 0; }
@@ -231,9 +239,9 @@ article.small .entry-title {
   padding-top: 30px;
   margin-top: 30px;
   border-top: 1px solid #B6B6B6; }
-  .single #comments ul#listed-comments li ul li {
+  .single #comments #listed-comments li ul li {
     padding-left: 20px; }
-  .single #comments ul#listed-comments li article {
+  .single #comments #listed-comments li article {
     padding: 20px;
     position: relative;
     margin: 0.5rem 0 1rem 0;
@@ -243,17 +251,17 @@ article.small .entry-title {
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     -webkit-transition-duration: 0.2s;
     transition-duration: 0.2s; }
-    .single #comments ul#listed-comments li article:hover {
+    .single #comments #listed-comments li article:hover {
       box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       -webkit-transition-duration: 0.2s;
       transition-duration: 0.2s; }
-    .single #comments ul#listed-comments li article p {
+    .single #comments #listed-comments li article p {
       margin: 0; }
-    .single #comments ul#listed-comments li article a {
+    .single #comments #listed-comments li article a {
       font-size: 0.8em; }
-      .single #comments ul#listed-comments li article a:hover {
+      .single #comments #listed-comments li article a:hover {
         color: #FF9800; }
-    .single #comments ul#listed-comments li article .comment-author.vcard {
+    .single #comments #listed-comments li article .comment-author.vcard {
       float: left;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -261,16 +269,16 @@ article.small .entry-title {
       -webkit-align-items: center;
       -ms-flex-align: center;
       align-items: center; }
-      .single #comments ul#listed-comments li article .comment-author.vcard b, .single #comments ul#listed-comments li article .comment-author.vcard span {
+      .single #comments #listed-comments li article .comment-author.vcard b, .single #comments #listed-comments li article .comment-author.vcard span {
         padding-left: 10px; }
-      .single #comments ul#listed-comments li article .comment-author.vcard img {
+      .single #comments #listed-comments li article .comment-author.vcard img {
         border-radius: 50%; }
-    .single #comments ul#listed-comments li article .comment-metadata {
+    .single #comments #listed-comments li article .comment-metadata {
       float: right; }
-    .single #comments ul#listed-comments li article footer.comment-meta {
+    .single #comments #listed-comments li article footer.comment-meta {
       display: inline-block;
       width: 100%; }
-  .single #comments ul#listed-comments .comment-meta a {
+  .single #comments #listed-comments .comment-meta a {
     font-size: 15px;
     font-style: italic;
     color: #212121; }
