@@ -13,3 +13,5 @@
 		?>
 	</h1>
 </a>
+<?php (is_single (  ) ) ? get_template_part( 'entry', 'meta' ) : ''; ?>
+</a>

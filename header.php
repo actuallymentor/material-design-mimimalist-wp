@@ -45,7 +45,7 @@
 			<div class="col l12 s12 valign-wrapper">
 				<div class="container center">
 
-					<header>
+					<header class="white-text">
 						<?php get_template_part( 'header', 'sitename' );
 						( is_home ( ) ) ? get_template_part( 'header', 'description' ) : get_template_part( 'header', 'title' ) ;
 						?>

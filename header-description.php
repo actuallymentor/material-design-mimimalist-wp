@@ -1,0 +1,1 @@
+<h2 id="subtitle" class="flow-text valign white-text center-align col l12 m12 s12"><?php bloginfo( 'description' ); ?></h2>
