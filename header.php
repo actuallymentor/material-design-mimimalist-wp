@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width" />
 	<?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> <?php if  ( is_single (  )  ) { echo ' itemscope itemtype="http://schema.org/Article" '; } ?> >
 	<div id="header" role="banner">
 		<!-- Header block -->
 		<div class="navbar">
