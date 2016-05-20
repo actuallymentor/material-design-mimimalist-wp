@@ -96,6 +96,9 @@ html body {
 			border-radius: 2px;
 			a {
 				width: 100%;
+				&:hover {
+					background-color: rgba(0, 0, 0, 0);
+				}
 			}
 		}
 		&:hover {
@@ -142,7 +145,7 @@ html body {
 	}
 }
 #header-intro {
-	height: 100vh;
+	height: 600px;
 	background-color: $primary-color;
 	.valign-wrapper {
 		height: 100%;

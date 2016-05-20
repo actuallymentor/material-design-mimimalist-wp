@@ -52,6 +52,8 @@ html body .primary {
       border-radius: 2px; }
       .navbar #desktopmenu .sub-menu li a {
         width: 100%; }
+        .navbar #desktopmenu .sub-menu li a:hover {
+          background-color: transparent; }
     .navbar #desktopmenu .sub-menu:hover {
       display: block;
       -webkit-transition: all 0.2s ease;
@@ -96,7 +98,7 @@ html body .primary {
           display: none; }
 
 #header-intro {
-  height: 100vh;
+  height: 600px;
   background-color: #2196F3; }
   #header-intro .valign-wrapper {
     height: 100%; }

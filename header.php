@@ -23,7 +23,7 @@
 						</div>
 
 						<!-- Wp Menu Mobile -->
-						<a href="#" data-activates="mobile-nav" class="button-collapse left"><i class="material-icons">menu</i></a>
+						<a href="#" data-activates="mobile-nav" id="button-collapse" class="button-collapse left"><i class="material-icons">menu</i></a>
 						<?php wp_nav_menu( array( 
 							'theme_location' => 'main-menu',
 							'container' => 'ul',
