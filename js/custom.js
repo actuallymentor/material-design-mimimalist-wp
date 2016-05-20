@@ -37,5 +37,8 @@ $ ( document ).on ( 'ready', function (  ) {
 	// Theme box hovering
 	$ ( '.box', '#content' ).hover ( depthadd, depthrem  )
 
+	// Make buttons pretty
+	$ ( 'input[type=submit]', '#content' ).addClass ( 'btn' )  
+
 	// End of menu hovering  
 } )  

@@ -65,6 +65,12 @@ html body {
 			zoom: 0.8;
 		}
 	}
+	.btn {
+		background-color: $accent-color;
+		margin-top: 10px;
+		padding: 10px 20px;
+		height: auto;
+	}
 }
 
 // Header
@@ -301,6 +307,11 @@ article {
 		}
 	}
 
+}
+
+// Pages
+#pagewrap {
+	padding: 20px;
 }
 
 // Single

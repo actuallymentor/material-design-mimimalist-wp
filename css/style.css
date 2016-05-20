@@ -28,6 +28,11 @@ html body .primary {
 @media screen and (min-width: 960px) {
   html body .flow-text {
     zoom: 0.8; } }
+html body .btn {
+  background-color: #FF9800;
+  margin-top: 10px;
+  padding: 10px 20px;
+  height: auto; }
 
 .navbar {
   position: absolute;
@@ -198,6 +203,9 @@ article.small .entry-title {
     #archive .collection img {
       height: 50px;
       width: 50px; }
+
+#pagewrap {
+  padding: 20px; }
 
 .single #container #content {
   padding-top: 0;

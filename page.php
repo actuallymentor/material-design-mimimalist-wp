@@ -1,18 +1,26 @@
 <?php get_header(); ?>
-<section id="content" role="main">
-	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<header class="header">
-				<h1 class="entry-title"><?php the_title(); ?></h1> <?php edit_post_link(); ?>
-			</header>
-			<section class="entry-content">
-				<?php if ( has_post_thumbnail() ) { the_post_thumbnail(); } ?>
-				<?php the_content(); ?>
-				<div class="entry-links"><?php wp_link_pages(); ?></div>
-			</section>
+
+
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+	<div id="pagewrap" class="col l12 m12 s12 white z-depth-1">
+		<div class="col l8 offset-l2 m12 s12 featuredimage">
+			<?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'large', ['class' => 'z-depth-1'] ); } ?>
+		</div>
+
+		<article>
+			<div class="col l8 offset-l2 m12 s12 flow-text contents">
+				<?php get_template_part( 'entry', 'content' ); ?>
+			</div>
 		</article>
-		<?php if ( ! post_password_required() ) comments_template( '', true ); ?>
-	<?php endwhile; endif; ?>
-</section>
-<?php get_sidebar(); ?>
+
+		<article>
+			<div class="col l8 offset-l2 m12 s12 commentwrap">
+				<?php if ( ! post_password_required() ) comments_template( '', true ); ?>
+			</div>
+		</article>
+	</div>
+<?php endwhile; endif; ?>
+
+
+
 <?php get_footer(); ?>

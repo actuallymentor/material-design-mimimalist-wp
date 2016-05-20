@@ -96,6 +96,15 @@
 									<h2 id="subtitle" class="flow-text valign white-text center-align col l12 m12 s12"><?php printf( __( 'Search Results for: %s', 'materialize' ), get_search_query() ); ?></h2>
 								</header>
 
+									<!-- Page stuff -->
+							<?php elseif ( is_page (  )   ): ?>
+								<a id="title" class="flow-text valign white-text center-align col l12 m12 s12" href="<?php echo get_option('siteurl') ?>">
+									<h1><?php echo esc_html( get_bloginfo( 'name' ) ); ?></h1>
+								</a>
+								<header>
+									<h2 id="subtitle" class="flow-text valign white-text center-align col l12 m12 s12"><?php the_title (  )  ?></h2>
+								</header>
+
 
 							<?php endif; ?>
 
