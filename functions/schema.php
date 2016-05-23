@@ -32,7 +32,7 @@ function schemadata() {
 					"url": "<?php echo get_option('siteurl') ?>",
 					"logo": {
 						"@type": "ImageObject",
-						"url": "",
+						"url": "<?php echo get_template_directory_uri (  ) ;?>/img/logo.png",
 						"width": "",
 						"height": "" // 60 pref
 					}
