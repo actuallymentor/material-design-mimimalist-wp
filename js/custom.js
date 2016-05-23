@@ -1,5 +1,6 @@
 // Function declarations
 
+
 // Fading in the dropdown menu
 var menufadein = function (  ) {
 	console.log ( 'Hovered child containing menu' ) 
@@ -33,7 +34,7 @@ var lazyblock = function ( context )  {
 	}	
 }
 var lazyload = function  (  )  {
-	if  ( $ ( this ).attr ( 'lazy' ).length > 0   ) {
+	if  ( $ ( this ).attr ( 'src' ).length < 1   ) {
 		console.log ( 'Lazyload triggered' ) 
 		$ ( this ).attr ( 'src', $ ( this ).attr ( 'lazy' )   )
 		$ ( this ).attr ( 'srcset', $ ( this ).attr ( 'lazyset' )   )
