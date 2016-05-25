@@ -129,6 +129,10 @@ html body .btn {
   padding-top: 50px;
   margin-top: -125px; }
 
+.featured .featured .circle.wp-post-image, .smallist .featured .circle.wp-post-image {
+  height: 150px;
+  width: 150px; }
+
 .search article.smalllist, .search article.featured, .home article.smalllist, .home article.featured, .archive article.smalllist, .archive article.featured {
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
