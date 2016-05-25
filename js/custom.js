@@ -48,7 +48,9 @@ var lazyload = function  (  )  {
 $ ( document ).on ( 'ready', function (  ) {
 	console.log ( 'DOM ready' ) 
 
-	// Lazyload implementation
+	$.getScript ( 'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js', function (  ) {
+		console.log ( 'Materialize loaded' ) 
+		// Lazyload implementation
 		//Lazyblock
 		lazyblock ( '#article' ) 
 		//Lazyload
@@ -56,18 +58,21 @@ $ ( document ).on ( 'ready', function (  ) {
 		$('img', '#article').on ( 'scrollSpy:enter', lazyload ) 
 
 
-	// Initialize mobile nav
-	$("#button-collapse").sideNav()
-	
-	// Trigger fading on submenu items
-	$ ( '.menu-item-has-children', '#desktopmenu' ).hover ( menufadein, menufadeout)
-	$ ( '.menu-item-has-children .sub-menu li', '#desktopmenu' ).hover ( depthadd, depthrem  )
+		// Initialize mobile nav
+		$("#button-collapse").sideNav()
+		
+		// Trigger fading on submenu items
+		$ ( '.menu-item-has-children', '#desktopmenu' ).hover ( menufadein, menufadeout)
+		$ ( '.menu-item-has-children .sub-menu li', '#desktopmenu' ).hover ( depthadd, depthrem  )
 
-	// Theme box hovering
-	$ ( '.box', '#content' ).hover ( depthadd, depthrem  )
+		// Theme box hovering
+		$ ( '.box', '#content' ).hover ( depthadd, depthrem  )
 
-	// Make buttons pretty
-	$ ( 'input[type=submit]', '#content' ).addClass ( 'btn' )  
+		// Make buttons pretty
+		$ ( 'input[type=submit]', '#content' ).addClass ( 'btn' )  
+
+
+	} ) 
 
 
 

@@ -114,7 +114,6 @@ function materialize_load_scripts ( ) {
 	wp_enqueue_style ( 'material-icons', 'https://fonts.googleapis.com/icon?family=Material+Icons', [], '0.97.6', 'all' );
 
 	// Materialize
-	wp_enqueue_script( 'materialize-js', 'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js', ['jquery'], '0.97.6', true );
 	wp_enqueue_style ( 'materialize', 'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css', [], '0.97.6', 'all' );
 
 	// Custom css and js
