@@ -147,24 +147,3 @@ add_action( 'init', 'register_shortcodes');
 
 // Schema support
 include ( get_template_directory() . '/functions/schema.php' );
-
-// jQuery fallback
-
-add_action('wp_footer', 'jqfallback');
-
-function jqfallback (  ) {
-	?>
-
-	<script>
-		document.addEventListener("DOMContentLoaded", function(event) { 
-			if  ( $ == undefined ) {
-				var js = document.createElement("script")
-				js.type = "text/javascript"
-				js.src = "<?php echo get_template_directory_uri(); ?>/js/jquery-2.2.3.min.js"
-				document.body.appendChild(js)
-			}
-		})
-	</script>
-
-	<?php
-}
