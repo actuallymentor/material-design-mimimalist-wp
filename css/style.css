@@ -58,7 +58,7 @@ html body .btn {
     .navbar #desktopmenu .sub-menu li {
       width: 100%;
       display: none;
-      background-color: rgba(0, 0, 0, 0.1);
+      background-color: #1976d2;
       margin: 4px 0px;
       border-radius: 2px; }
       .navbar #desktopmenu .sub-menu li a {
