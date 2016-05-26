@@ -12,7 +12,7 @@
 				<article <?php post_class('featured center col l12 m12 s12 first'); ?> id="post-<?php the_ID(); ?>">
 					<header>
 						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark">
-							<?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'thumbnail', array( 'class' => 'circle z-depth-1' ) ); } ?>
+							<?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'thumbnail', array( 'class' => 'circle z-depth-1', 'height' => '150px', 'width' => '150px' ) ); } ?>
 							<h2 href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark"><?php the_title(); ?></h2>
 						</a>
 						<i><?php get_template_part( 'entry', 'meta' ); ?></i>
