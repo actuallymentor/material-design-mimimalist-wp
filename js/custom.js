@@ -71,10 +71,31 @@ $ ( document ).on ( 'ready', function (  ) {
 		// Make buttons pretty
 		$ ( 'input[type=submit]', '#content' ).addClass ( 'btn' )  
 
-
 	} ) 
 
+	// GA Event tracking
+	$('#wprm_submit').on('click', function() {
+			ga('send', 'event', {
+				eventCategory: 'Benefits',
+				eventAction: 'Signup',
+				eventLabel: 'Remindme'
+			})
+		});
+		$("#mdsh_lin, #mdsh_twi, #mdsh_fb").on('click', function() {
+			ga('send', 'event', {
+				eventCategory: 'Social sharing',
+				eventAction: 'Button',
+				eventLabel: 'Click'
+			})
+		});
+		$('#wpsp_submit').on('click', function() {
+			ga('send', 'event', {
+				eventCategory: 'Benefits',
+				eventAction: 'Signup',
+				eventLabel: 'Headerwell'
+			})
+		});
 
 
-	// End of menu hovering  
+	
 } )  
