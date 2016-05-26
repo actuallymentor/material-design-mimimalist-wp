@@ -123,7 +123,7 @@ html body {
 	.navwidget {
 		height: 100%;
 		padding: 10px 0;
-		width: 250px;
+		width: 280px;
 		position: absolute;
 		right: 0;
 		top: 0;
@@ -136,7 +136,6 @@ html body {
 		}
 		form, .input-field, .input-field input {
 			height: 100%;
-			width: 100%;
 		}
 		@include placeholder {
 			font-size: 1rem;

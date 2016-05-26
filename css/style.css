@@ -74,7 +74,7 @@ html body .btn {
   .navbar .navwidget {
     height: 100%;
     padding: 10px 0;
-    width: 250px;
+    width: 280px;
     position: absolute;
     right: 0;
     top: 0; }
@@ -85,8 +85,7 @@ html body .btn {
       color: rgba(255, 255, 255, 0.8);
       font-size: 1rem; }
     .navbar .navwidget form, .navbar .navwidget .input-field, .navbar .navwidget .input-field input {
-      height: 100%;
-      width: 100%; }
+      height: 100%; }
     .navbar .navwidget ::-webkit-input-placeholder {
       font-size: 1rem; }
     .navbar .navwidget :-moz-placeholder {
