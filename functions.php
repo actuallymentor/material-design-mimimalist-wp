@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 add_action( 'after_setup_theme', 'materialize_setup' );
 function materialize_setup ( ) {
 	load_theme_textdomain( 'materialize', get_template_directory() . '/languages' );
@@ -126,8 +127,9 @@ function materialize_load_scripts ( ) {
 }
 }
 
+// Enable shortcodes in text widgets
+add_filter('widget_text','do_shortcode');
 
-// error_reporting(E_ERROR);
 // Box shortcode
 
 function boxify ( $atts, $content = null ) {
@@ -180,7 +182,7 @@ function analytics_tags() { ?>
 	<!-- Google Analytics -->
 	<script>
 		document.addEventListener("DOMContentLoaded", function(event) { 
-			
+
 			console.log ( 'Pixels triggered' );
 
 		// GA Tracking code
