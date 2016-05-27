@@ -11,10 +11,10 @@ $divider-color:        #B6B6B6;
 $background:			#F5F5F5;
 
 @mixin placeholder {
-	::-webkit-input-placeholder {@content}
-	:-moz-placeholder           {@content}
-	::-moz-placeholder          {@content}
-	:-ms-input-placeholder      {@content}  
+	&::-webkit-input-placeholder {@content}
+	&:-moz-placeholder           {@content}
+	&::-moz-placeholder          {@content}
+	&:-ms-input-placeholder      {@content}  
 }
 @mixin smoothtransition {
 	-webkit-transition: all 0.2s ease;
@@ -33,6 +33,9 @@ html body {
 	}
 	.nopad {
 		padding: 0 !important;
+	}
+	.nomar {
+		margin: 0!important;
 	}
 	main {
 		width: 100%;
@@ -57,6 +60,9 @@ html body {
 	.primary {
 		background-color: $primary-color;
 	}
+	.accent-text {
+		color: $accent-color;
+	}
 	.flow-text {
 		@media screen and  ( min-width: 700px ) {
 			zoom: 0.9;
@@ -74,6 +80,19 @@ html body {
 }
 
 // Header
+// Widget specific
+#wprmemail{
+	@include placeholder {
+		color: grey;
+		text-align: center;
+	}
+	text-align: center;
+	&:focus {
+		border-bottom: 1px solid $accent-color;
+		box-shadow: 0 1px 0 0 $accent-color;
+	}
+}
+// Widget specific
 
 .navbar {
 	position: absolute;

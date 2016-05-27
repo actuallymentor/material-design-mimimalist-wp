@@ -5,6 +5,8 @@ html body img {
   max-height: 100%; }
 html body .nopad {
   padding: 0 !important; }
+html body .nomar {
+  margin: 0 !important; }
 html body main {
   width: 100%; }
 html body main h1, html body main h2, html body main h3, html body main h4, html body main h5, html body main h6 {
@@ -22,6 +24,8 @@ html body .text-depth-1 {
   text-shadow: 0px 8px 5px rgba(0, 0, 0, 0.3); }
 html body .primary {
   background-color: #2196F3; }
+html body .accent-text {
+  color: #FF9800; }
 @media screen and (min-width: 700px) {
   html body .flow-text {
     zoom: 0.9; } }
@@ -33,6 +37,24 @@ html body .btn {
   margin-top: 10px;
   padding: 10px 20px;
   height: auto; }
+
+#wprmemail {
+  text-align: center; }
+  #wprmemail::-webkit-input-placeholder {
+    color: grey;
+    text-align: center; }
+  #wprmemail:-moz-placeholder {
+    color: grey;
+    text-align: center; }
+  #wprmemail::-moz-placeholder {
+    color: grey;
+    text-align: center; }
+  #wprmemail:-ms-input-placeholder {
+    color: grey;
+    text-align: center; }
+  #wprmemail:focus {
+    border-bottom: 1px solid #FF9800;
+    box-shadow: 0 1px 0 0 #FF9800; }
 
 .navbar {
   position: absolute;
@@ -86,13 +108,13 @@ html body .btn {
       font-size: 1rem; }
     .navbar .navwidget form, .navbar .navwidget .input-field, .navbar .navwidget .input-field input {
       height: 100%; }
-    .navbar .navwidget ::-webkit-input-placeholder {
+    .navbar .navwidget::-webkit-input-placeholder {
       font-size: 1rem; }
-    .navbar .navwidget :-moz-placeholder {
+    .navbar .navwidget:-moz-placeholder {
       font-size: 1rem; }
-    .navbar .navwidget ::-moz-placeholder {
+    .navbar .navwidget::-moz-placeholder {
       font-size: 1rem; }
-    .navbar .navwidget :-ms-input-placeholder {
+    .navbar .navwidget:-ms-input-placeholder {
       font-size: 1rem; }
     .navbar .navwidget .input-field input[type=search] {
       padding: 0 20px;
