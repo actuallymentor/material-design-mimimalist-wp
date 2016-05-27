@@ -1,7 +1,7 @@
 <div class="col l6 m12 s12 distance">
 	<article <?php post_class('bottomlist white center col l12 z-depth-1 m12 s12'); ?> id="post-<?php the_ID(); ?>">
 		<header class="valign-wrapper">
-			<div class="left">
+			<div class="left imgwrap">
 				<?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'thumbnail', array( 'class' => 'z-depth-1 circle' ) ); } ?>
 			</div>
 			<div class="left">
