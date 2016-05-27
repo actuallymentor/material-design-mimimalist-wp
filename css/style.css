@@ -135,6 +135,9 @@ html body .btn {
 #header-intro {
   min-height: 600px;
   background-color: #2196F3; }
+  @media screen and (max-width: 968px) {
+    #header-intro {
+      min-height: 750px; } }
   #header-intro .valign-wrapper {
     height: 100%; }
   #header-intro #title {
