@@ -97,6 +97,7 @@ function materialize_comments_number( $count ) {
 
 // Add thumbnail support
 add_theme_support( 'post-thumbnails' );
+add_image_size ( 'mini','100', '100', true );
 add_image_size ( 'thumbnail','150', '150', true );
 add_image_size ( 'small','250', '250', true );
 add_image_size ( 'medium','550', '400', true );
