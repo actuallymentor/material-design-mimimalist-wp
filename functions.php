@@ -105,8 +105,11 @@ add_image_size ( 'schema','696', '696', true );
 
 
 // Scripts, handle, src, deps, ver, in_footer
-add_action( 'wp_enqueue_scripts', 'materialize_load_scripts' );
+if ( ! is_admin() ) {
+	add_action( 'wp_enqueue_scripts', 'materialize_load_scripts' );
+}
 function materialize_load_scripts ( ) {
+	if ( ! is_admin() ) {
 	wp_deregister_script( 'jquery' ); // Unload default wp jquery
 
 	// Dependencies
@@ -119,6 +122,7 @@ function materialize_load_scripts ( ) {
 	// Custom css and js
 	wp_enqueue_style( 'custom-styles', get_template_directory_uri() . '/css/style.css', [], '2.0', 'all' );
 	wp_enqueue_script( 'custom-js', get_template_directory_uri() . '/js/custom.js', ['jquery'], '1.0.0', true );
+	}
 }
 
 
@@ -172,36 +176,36 @@ function jqfallback (  ) {
 // Add analytics tags
 add_action( 'wp_footer', 'analytics_tags');
 function analytics_tags() { ?>
-<!-- Google Analytics -->
-<script>
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-	ga('create', 'UA-11561065-10', 'auto');
-	ga('require', 'displayfeatures');
-	ga('send', 'pageview');
+		ga('create', 'UA-11561065-10', 'auto');
+		ga('require', 'displayfeatures');
+		ga('send', 'pageview');
 
-</script>
-<!-- End Google Analytics -->
-
-<!-- End GA event tracking -->
-
-<!-- Facebook Pixel Code -->
-<script>
-	!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-		n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-		n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-		t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-			document,'script','//connect.facebook.net/en_US/fbevents.js');
-
-		fbq('init', '500924636726230');
-		fbq('track', 'PageView');
 	</script>
-	<noscript><img height="1" width="1" style="display:none"
-		src="https://www.facebook.com/tr?id=500924636726230&ev=PageView&noscript=1"
-		/></noscript>
-		<!-- End Facebook Pixel Code -->
-		<?php
-}
+	<!-- End Google Analytics -->
+
+	<!-- End GA event tracking -->
+
+	<!-- Facebook Pixel Code -->
+	<script>
+		!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+			n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+			n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+			t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+				document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+			fbq('init', '500924636726230');
+			fbq('track', 'PageView');
+		</script>
+		<noscript><img height="1" width="1" style="display:none"
+			src="https://www.facebook.com/tr?id=500924636726230&ev=PageView&noscript=1"
+			/></noscript>
+			<!-- End Facebook Pixel Code -->
+			<?php
+		}
