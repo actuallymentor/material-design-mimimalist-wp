@@ -262,9 +262,18 @@ html body {
 				width: 80px;
 			}
 		}
+		@media screen and  ( max-width: 550px ) {
+			img {
+				height: 60px;
+				width: 60px;
+			}
+		}
 		padding: 15px;
 		margin: 10px 0;
 		min-height: 136px;
+		@media screen and  ( max-width: 968px ) {
+			min-height: 60px;
+		}
 	}
 }
 
