@@ -221,6 +221,9 @@ html body {
 }
 
 .search, .home, .archive {
+	#header-intro {
+		max-height: 100vh;
+	}
 	article {
 		&.smalllist, &.featured {
 			& {
