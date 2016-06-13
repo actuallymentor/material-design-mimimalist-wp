@@ -9,7 +9,7 @@
 		(is_archive (  ) ) ? the_archive_title( 'Posts with ' ) : '';
 		(is_single (  ) ) ? the_title_attribute() : '';
 		(is_page (  ) ) ? the_title() : '';
-		(is_404 (  ) ) ? '404 Error' : '';
+		(is_404 (  ) ) ? print_r( '404 Error - Page not found' ) : '';
 		?>
 	</h1>
 </a>

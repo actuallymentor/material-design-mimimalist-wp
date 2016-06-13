@@ -40,6 +40,9 @@ html body .btn {
   html body .btn:hover {
     background-color: #FF9800;
     opacity: 0.7; }
+html body #searchform i {
+  top: 10px;
+  position: absolute; }
 
 #wprmemail {
   text-align: center; }
@@ -103,7 +106,7 @@ html body .btn {
     position: absolute;
     right: 0;
     top: 0; }
-    .navbar .navwidget i {
+    .navbar .navwidget #searchform i {
       position: absolute;
       left: -5px;
       top: -9px;

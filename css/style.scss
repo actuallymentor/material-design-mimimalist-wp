@@ -7,7 +7,6 @@ $accent-color:         #FF9800;
 $primary-text-color:   #212121;
 $secondary-text-color: #727272;
 $divider-color:        #B6B6B6;
-
 $background:			#F5F5F5;
 
 @mixin placeholder {
@@ -81,6 +80,12 @@ html body {
 			opacity: 0.7;
 		}
 	}
+	#searchform {
+		i {
+			top: 10px;
+			position: absolute;
+		}
+	}
 }
 
 // Header
@@ -150,7 +155,7 @@ html body {
 		position: absolute;
 		right: 0;
 		top: 0;
-		i {
+		#searchform i {
 			position: absolute;
 			left: -5px;
 			top: -9px;
