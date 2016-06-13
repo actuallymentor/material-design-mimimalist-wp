@@ -229,3 +229,7 @@ function my_theme_wrapper_start() {
 function my_theme_wrapper_end() {
   echo '</div>';
 }
+add_action( 'after_setup_theme', 'declare_sensei_support' );
+function declare_sensei_support() {
+    add_theme_support( 'sensei' );
+}
