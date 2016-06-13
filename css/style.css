@@ -401,4 +401,7 @@ body {
 main {
   flex: 1 0 auto; }
 
+#post-entries {
+  background-color: #2196F3; }
+
 /*# sourceMappingURL=style.css.map */
