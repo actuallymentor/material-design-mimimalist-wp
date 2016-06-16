@@ -414,13 +414,16 @@ article {
 		width: 100%;
 	}
 	#article {
-		.wp-caption {
-			
-			a {
-				width: 100%;
-				text-align: center;
-				display: block;
+		a[rel~=attachment] {
+			width: 100%;
+			text-align: center;
+			display: block;
+			img {
+				min-width: 200px;
+				min-height: 200px;
+				background: silver;
 			}
+
 		}
 		img, iframe {
 			@include smoothtransition;

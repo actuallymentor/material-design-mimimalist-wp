@@ -279,10 +279,14 @@ article.small .entry-title {
       color: #FF9800; }
 .single iframe {
   width: 100%; }
-.single #article .wp-caption a {
+.single #article a[rel~=attachment] {
   width: 100%;
   text-align: center;
   display: block; }
+  .single #article a[rel~=attachment] img {
+    min-width: 200px;
+    min-height: 200px;
+    background: silver; }
 .single #article img, .single #article iframe {
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
