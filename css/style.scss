@@ -370,36 +370,36 @@ article {
 #pagewrap {
 	padding: 20px;
 	a[rel~=attachment] {
-			width: 100%;
-			text-align: center;
-			display: block;
-			img {
-				min-width: 200px;
-				min-height: 200px;
-				background: silver;
-			}
+		width: 100%;
+		text-align: center;
+		display: block;
+		img {
+			min-width: 200px;
+			min-height: 200px;
+			background: silver;
+		}
+
+	}
+	img, iframe {
+		@include smoothtransition;
+		box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+		padding: 10px;
+		&:hover {
+			box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+			@include smoothtransition;
+		}
+	}
+	.lesson {
+		h2, h3, h4 {
+			zoom: 0.6;
+		}
+	}
+	&.sensei {
+		background-color: white;
+		.nav-next {
 
 		}
-		img, iframe {
-			@include smoothtransition;
-			box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
-			padding: 10px;
-			&:hover {
-				box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-				@include smoothtransition;
-			}
-		}
-		.lesson {
-			h2, h3, h4 {
-				zoom: 0.6;
-			}
-		}
-		&.sensei {
-			background-color: white;
-			.nav-next {
-				float: none;
-			}
-		}
+	}
 }
 
 // Single
