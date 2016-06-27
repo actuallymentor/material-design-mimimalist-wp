@@ -394,6 +394,12 @@ article {
 				zoom: 0.6;
 			}
 		}
+		&.sensei {
+			background-color: white;
+			.nav-next {
+				float: none;
+			}
+		}
 }
 
 // Single
