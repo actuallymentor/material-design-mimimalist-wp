@@ -275,6 +275,12 @@ article.small .entry-title {
       -moz-transition: all 0.2s ease;
       -o-transition: all 0.2s ease;
       transition: all 0.2s ease; }
+  #pagewrap .lesson h2, #pagewrap .lesson h3, #pagewrap .lesson h4 {
+    zoom: 0.6; }
+  #pagewrap.sensei {
+    background-color: white; }
+    #pagewrap.sensei .nav-next {
+      float: none; }
 
 .single #container #content {
   padding-top: 0;
