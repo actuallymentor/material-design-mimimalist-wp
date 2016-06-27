@@ -2,7 +2,7 @@
 
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-	<div id="pagewrap" class="col l12 m12 s12 white z-depth-1">
+	<div id="pagewrap" class="col l8 offset-l2 m12 s12 white z-depth-1">
 		<div class="col l8 offset-l2 m12 s12 featuredimage">
 			<?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'large', ['class' => 'z-depth-1'] ); } ?>
 		</div>
