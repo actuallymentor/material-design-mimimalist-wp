@@ -425,6 +425,13 @@ article {
 				list-style-type: disc;
 			}
 		}
+		ol {
+			padding-left: 45px;
+			margin: 25px 0;
+			li {
+				list-style-type: decimal;
+			}
+		}
 	}
 	.featuredimage {
 		img {

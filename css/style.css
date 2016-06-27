@@ -293,6 +293,11 @@ article.small .entry-title {
   margin: 25px 0; }
   .single .entry-content ul li {
     list-style-type: disc; }
+.single .entry-content ol {
+  padding-left: 45px;
+  margin: 25px 0; }
+  .single .entry-content ol li {
+    list-style-type: decimal; }
 .single .featuredimage img {
   width: 100%;
   height: auto; }
