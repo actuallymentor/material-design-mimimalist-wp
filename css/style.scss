@@ -389,6 +389,11 @@ article {
 				@include smoothtransition;
 			}
 		}
+		.lesson {
+			h2, h3, h4 {
+				zoom: 0.6;
+			}
+		}
 }
 
 // Single

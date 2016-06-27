@@ -223,7 +223,7 @@ add_action('sensei_before_main_content', 'my_theme_wrapper_start', 10);
 add_action('sensei_after_main_content', 'my_theme_wrapper_end', 10);
 
 function my_theme_wrapper_start() {
-  echo '<div id="pagewrap" class="sensei col l8 offset-l2 m12 s12 white z-depth-1">';
+  echo '<div id="pagewrap" class="sensei col l8 offset-l2 m12 s12">';
 }
 
 function my_theme_wrapper_end() {
