@@ -51,7 +51,7 @@
 						?>
 					</header>
 
-				<?php if ( is_single (  )  ) : ?> 
+				<?php if ( is_single (  ) || is_archive(  ) || is_page(  )  ) : ?> 
 					<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Header Widget") ) : ?><?php endif;?>
 				<?php endif;?>
 
