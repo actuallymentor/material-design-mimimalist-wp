@@ -71,8 +71,8 @@ function materialize_widgets_init ( ) {
 		'after_title' => '</h5>',
 		) );
 	register_sidebar( array (
-		'name' => __( 'Archive Widget', 'header-widget' ),
-		'id' => 'header-widget',
+		'name' => __( 'Archive Widget', 'archive-widget' ),
+		'id' => 'archive-widget',
 		'before_widget' => '<div class="headwidget col l12 m12 s12">',
 		'after_widget' => "</div>",
 		'before_title' => '<h5 class="widget-title">',
