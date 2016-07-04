@@ -49,7 +49,7 @@
 						<?php get_template_part( 'header', 'sitename' );
 						if ( is_home(  ) ) {
 							get_template_part( 'header', 'description' );
-						} elseif ( is_singular( 'podcast' ) == 1 ) {
+						} elseif ( is_post_type_archive( 'podcast' ) == 1 ) {
 							get_template_part( 'header', 'podcast' );
 						} else {
 							get_template_part( 'header', 'title' );
