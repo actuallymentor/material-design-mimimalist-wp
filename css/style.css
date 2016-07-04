@@ -486,7 +486,7 @@ main {
     border-bottom: 1px solid #FF9800;
     box-shadow: 0 1px 0 0 #FF9800; }
 
-.post-type-archive-podcast #subtitle.podcast {
+.post-type-archive-podcast #header-intro #subtitle.podcast {
   font-size: 4.2rem;
   font-style: inherit; }
 
