@@ -4,7 +4,7 @@
 
 	<article>
 		<div class="col l8 offset-l2 m12 s12 featuredimage">
-			<?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'large', ['class' => 'z-depth-1', 'width' => '853'] ); } ?>
+			<?php if ( has_post_thumbnail() || !is_archive(  ) ) { the_post_thumbnail( 'large', ['class' => 'z-depth-1', 'width' => '853'] ); } ?>
 		</div>
 
 		<section id="article">
