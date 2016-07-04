@@ -648,3 +648,14 @@ main {
 #podcastsingup.btn {
 	padding: 0 10px;
 }
+#podmail {
+	@include placeholder {
+		color: grey;
+		text-align: center;
+	}
+	text-align: center;
+	&:focus {
+		border-bottom: 1px solid $accent-color;
+		box-shadow: 0 1px 0 0 $accent-color;
+	}
+}
