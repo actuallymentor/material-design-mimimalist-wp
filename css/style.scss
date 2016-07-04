@@ -642,8 +642,8 @@ main {
 	.podcast_player {
 		margin-bottom: 40px;
 	}
-	.entry-content {
-		#content p:first-child {
+	#content {
+		.entry-content p:first-child {
 			background: white;
 			padding: 20px;
 			box-shadow: 0 2px 5px 0 rgba(0,0,0,.16) , 0 2px 10px 0 rgba(0,0,0,.12);
