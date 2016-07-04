@@ -22,11 +22,11 @@
 	</article>
 	<script>
 	console.log( 'Is singular' )
-	console.log( <?php echo is_singular(  ) ?> )
+	console.log( <?php print_r(  is_singular(  ) ) ?> )
 	console.log( 'Is singular podcast' )
-	console.log( <?php echo is_singular( 'podcast' ) ?> )
+	console.log( <?php print_r(  is_singular( 'podcast' ) ) ?> )
 	console.log( 'Post type' )
-	console.log( <?php echo get_post_type() ?> )
+	console.log( <?php print_r(  get_post_type() ) ?> )
 	</script>
 <?php endwhile; endif; ?>
 
