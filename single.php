@@ -20,9 +20,7 @@
 		</section>
 
 	</article>
-	<script>
-	console.log( <?php echo 'The post type is: ' . get_post_type( get_the_ID() ); ?> )
-	</script>
+	<?php echo 'is singular podcast' . echo is_singular( 'podcast' ) . ' post type ' . echo get_post_type() ?>
 <?php endwhile; endif; ?>
 
 
