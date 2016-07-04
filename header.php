@@ -47,7 +47,13 @@
 
 					<header class="white-text">
 						<?php get_template_part( 'header', 'sitename' );
-						( is_home ( ) ) ? get_template_part( 'header', 'description' ) : get_template_part( 'header', 'title' ) ;
+						if ( is_home(  ) ) {
+							get_template_part( 'header', 'description' );
+						} elseif ( is_singular( 'podcast' ) == 1 ) {
+							get_template_part( 'header', 'podcast' );
+						} else {
+							get_template_part( 'header', 'title' );
+						}
 						?>
 					</header>
 
