@@ -175,8 +175,6 @@ html body #searchform i {
   height: 150px !important;
   width: 150px !important; }
 
-.search #header-intro, .home #header-intro, .archive #header-intro {
-  max-height: 100vh; }
 .search article.smalllist, .search article.featured, .home article.smalllist, .home article.featured, .archive article.smalllist, .archive article.featured {
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
@@ -221,7 +219,9 @@ html body #searchform i {
     margin-right: 20px; }
   .search article.bottomlist img, .home article.bottomlist img, .archive article.bottomlist img {
     height: 100px;
-    width: 100px; }
+    width: 100px;
+    max-width: none;
+    max-height: none; }
   @media screen and (max-width: 968px) {
     .search article.bottomlist img, .home article.bottomlist img, .archive article.bottomlist img {
       height: 80px;
@@ -455,5 +455,31 @@ main {
 
 #post-entries {
   background-color: #2196F3; }
+
+.single-podcast .mejs-container, .single-podcast .mejs-container .mejs-controls, .single-podcast .mejs-embed, .single-podcast .mejs-embed body {
+  background: #2196f3; }
+.single-podcast .podcast_player {
+  margin-bottom: 40px; }
+
+#podcastsingup.btn {
+  padding: 0 10px; }
+
+#podmail {
+  text-align: center; }
+  #podmail::-webkit-input-placeholder {
+    color: grey;
+    text-align: center; }
+  #podmail:-moz-placeholder {
+    color: grey;
+    text-align: center; }
+  #podmail::-moz-placeholder {
+    color: grey;
+    text-align: center; }
+  #podmail:-ms-input-placeholder {
+    color: grey;
+    text-align: center; }
+  #podmail:focus {
+    border-bottom: 1px solid #FF9800;
+    box-shadow: 0 1px 0 0 #FF9800; }
 
 /*# sourceMappingURL=style.css.map */
