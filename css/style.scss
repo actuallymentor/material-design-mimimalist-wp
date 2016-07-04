@@ -240,7 +240,7 @@ html body {
 
 .search, .home, .archive {
 	#header-intro {
-		max-height: 100vh;
+		// max-height: 100vh;
 	}
 	article {
 		&.smalllist, &.featured {
@@ -301,8 +301,8 @@ html body {
 		img {
 			height: 100px;
 			width: 100px;
-			max-width: 200px;
-			max-height: 200px;
+			max-width: none;
+			max-height: none;
 		}
 		@media screen and  ( max-width: 968px ) {
 			img {
@@ -642,4 +642,9 @@ main {
 	.podcast_player {
 		margin-bottom: 40px;
 	}
+}
+
+// Podcast widget
+#podcastsingup.btn {
+	padding: 0 10px;
 }
