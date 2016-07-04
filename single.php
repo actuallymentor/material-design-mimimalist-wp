@@ -21,12 +21,7 @@
 
 	</article>
 	<script>
-	console.log( 'Is singular' )
-	console.log( <?php print_r(  is_singular(  ) ) ?> )
-	console.log( 'Is singular podcast' )
-	console.log( <?php print_r(  is_singular( 'podcast' ) ) ?> )
-	console.log( 'Post type' )
-	console.log( <?php print_r(  get_post_type() ) ?> )
+	console.log( <?php echo 'The post type is: ' . get_post_type( get_the_ID() ); ?> )
 	</script>
 <?php endwhile; endif; ?>
 
