@@ -20,7 +20,6 @@
 		</section>
 
 	</article>
-	<?php echo 'is singular podcast' . is_singular( 'podcast' ) . ' post type ' . get_post_type() ?>
 <?php endwhile; endif; ?>
 
 
