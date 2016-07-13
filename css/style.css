@@ -469,21 +469,21 @@ main {
 #podcastsingup.btn {
   padding: 0 10px; }
 
-#podmail {
+#podmail, #pdfplz {
   text-align: center; }
-  #podmail::-webkit-input-placeholder {
+  #podmail::-webkit-input-placeholder, #pdfplz::-webkit-input-placeholder {
     color: grey;
     text-align: center; }
-  #podmail:-moz-placeholder {
+  #podmail:-moz-placeholder, #pdfplz:-moz-placeholder {
     color: grey;
     text-align: center; }
-  #podmail::-moz-placeholder {
+  #podmail::-moz-placeholder, #pdfplz::-moz-placeholder {
     color: grey;
     text-align: center; }
-  #podmail:-ms-input-placeholder {
+  #podmail:-ms-input-placeholder, #pdfplz:-ms-input-placeholder {
     color: grey;
     text-align: center; }
-  #podmail:focus {
+  #podmail:focus, #pdfplz:focus {
     border-bottom: 1px solid #FF9800;
     box-shadow: 0 1px 0 0 #FF9800; }
 
