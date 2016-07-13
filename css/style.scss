@@ -657,7 +657,7 @@ main {
 #podcastsingup.btn {
 	padding: 0 10px;
 }
-#podmail, #hcrmform {
+#podmail, #hcrmform input {
 	@include placeholder {
 		color: grey;
 		text-align: center;
