@@ -167,6 +167,9 @@ html body #searchform i {
     -o-transition: all 0.2s ease;
     transition: all 0.2s ease; }
 
+.home #header-intro {
+  max-height: 100vh; }
+
 #container #content {
   padding-top: 50px;
   margin-top: -125px; }
@@ -490,5 +493,8 @@ main {
 .post-type-archive-podcast #header-intro #subtitle.podcast {
   font-size: 4.2rem;
   font-style: inherit; }
+
+.gist {
+  zoom: 1.5; }
 
 /*# sourceMappingURL=style.css.map */
