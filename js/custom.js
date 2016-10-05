@@ -95,7 +95,13 @@ $ ( document ).on ( 'ready', function (  ) {
 			eventLabel: 'Headerwell'
 		})
 	});
-
+	$('#fivebfsubmit').on('click', function() {
+		ga('send', 'event', {
+			eventCategory: 'Benefits',
+			eventAction: 'Signup',
+			eventLabel: 'Fivebf'
+		})
+	});
 
 	
 } )  
